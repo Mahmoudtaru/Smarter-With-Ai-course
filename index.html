@@ -16,13 +16,16 @@
         :root {
             --teal-dark: #0f766e;
             --teal-light: #0d9488;
-            --accent-gold: #facc15; /* yellow-400 */
+            --accent-gold: #facc15;
+            --track-green: #22c55e;
+            --track-blue: #3b82f6;
+            --track-purple: #a855f7;
         }
         body {
             font-family: 'Tajawal', sans-serif;
             scroll-behavior: smooth;
-            background-color: #f8fafc; /* slate-50 */
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            background-color: #f8fafc;
+            overflow-x: hidden;
         }
         .hero-bg {
             background-color: var(--teal-dark);
@@ -32,14 +35,14 @@
             background-size: 2rem 2rem;
         }
         .section-bg-gray {
-            background-color: #f1f5f9; /* slate-100 */
+            background-color: #f1f5f9;
         }
         .gradient-bg-section {
              background-image: linear-gradient(to bottom right, var(--teal-light), var(--teal-dark));
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 1rem;
@@ -54,28 +57,25 @@
             height: 100%;
         }
         .benefit-card {
-            border-right: 4px solid transparent; /* Added right border for RTL */
+            border-right: 4px solid transparent;
              transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-             background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for cards */
-             border-color: rgba(255, 255, 255, 0.2); /* Lighter border for contrast */
+             background-color: rgba(255, 255, 255, 0.1);
+             border-color: rgba(255, 255, 255, 0.2);
         }
         .benefit-card h3, .benefit-card p {
-            color: white; /* Make text white */
+            color: white;
         }
         .benefit-card .benefit-icon {
-            color: var(--accent-gold); /* Make icons gold for contrast */
-            transition: transform 0.3s ease; /* Add transition for icon */
+            color: var(--accent-gold);
+            transition: transform 0.3s ease;
         }
         .benefit-card:hover {
-             border-right-color: var(--accent-gold); /* Show border on hover, use gold */
-             background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
-             transform: translateY(-5px); /* Subtle lift effect */
-        }
-        .benefit-card:hover .benefit-icon {
-            transform: scale(1.1) rotate(-5deg);
+             border-right-color: var(--accent-gold);
+             background-color: rgba(255, 255, 255, 0.2);
+             transform: translateY(-5px);
         }
         #why-join.hero-bg h2, #why-join.hero-bg > div > .text-center > p {
-            color: white; /* Ensure headings and paragraphs are white */
+            color: white;
         }
         #main-header {
             background-color: rgba(15, 118, 110, 0.9);
@@ -89,20 +89,14 @@
             overflow: hidden;
             transition: max-height 0.5s ease-in-out;
         }
-        .accordion-button .accordion-icon {
-             transition: transform 0.4s ease; /* Icon transition */
-        }
         .accordion-button.active .accordion-icon {
             transform: rotate(180deg);
         }
-        .glow-effect:hover {
-            box-shadow: 0 0 15px 5px rgba(250, 204, 21, 0.4);
-        }
         .logo-container {
             background-color: white;
-            border-radius: 0.75rem; /* rounded-lg */
+            border-radius: 0.75rem;
             padding: 8px;
-            display: inline-flex; /* Changed to inline-flex to fit content */
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -111,103 +105,63 @@
             height: 40px;
             width: auto;
         }
-         .skill-card, .bonus-card, .testimonial-card { /* Added testimonial-card */
+         .track-card, .bonus-card, .testimonial-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-             border: 1px solid #e2e8f0; /* slate-200 */
+             border: 1px solid #e2e8f0;
              display: flex;
              flex-direction: column;
-             background-color: white; /* Ensure white background */
+             background-color: white;
         }
-         .skill-card {
-            border-top: 4px solid transparent;
-         }
-        .skill-card:hover {
+        .track-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            border-top-color: var(--teal-light); /* Show border on hover */
-        }
-        .bonus-card {
-             border-right: 4px solid transparent; /* Added right border for RTL */
-             border-top: none; /* Remove top border for bonus cards */
-             border-color: #e2e8f0; /* Default border color */
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
         .bonus-card:hover {
              transform: translateY(-8px);
              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
-             border-right-color: var(--accent-gold); /* Show different border color on hover */
+             border-right-color: var(--accent-gold);
         }
-        /* Testimonial card specific styles */
         .testimonial-card {
-            border-right: 4px solid var(--teal-light); /* Distinct border for testimonials */
+            border-right: 4px solid var(--teal-light);
             border-top: none;
-            background-color: white; /* Ensure white background for cards themselves */
+            background-color: white;
         }
         .testimonial-card:hover {
              transform: translateY(-8px);
              box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
              border-right-color: var(--accent-gold);
         }
-        /* New style for testimonials section background */
         #testimonials.gradient-bg-testimonials {
-            background-image: linear-gradient(to top left, #a7f3d0, #5eead4, #0d9488); /* Lighter teal/green gradient */
+            background-image: linear-gradient(to top left, #a7f3d0, #5eead4, #0d9488);
         }
          #testimonials.gradient-bg-testimonials h2 {
             color: white;
          }
-         #testimonials.gradient-bg-testimonials .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white cards */
-            border-color: rgba(255, 255, 255, 0.5);
-         }
-         #testimonials.gradient-bg-testimonials .testimonial-card p {
-            color: #1e293b; /* Dark text for cards */
-         }
-         #testimonials.gradient-bg-testimonials .testimonial-card i.fa-quote-right {
-             color: var(--teal-dark); /* Darker teal for quote icon */
-         }
-        
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid var(--teal-light);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
         .platform-tag {
-            font-family: monospace; /* Use monospace font */
-            font-size: 0.75rem; /* text-xs */
-            background-color: #f1f5f9; /* slate-100 */
-            color: #475569; /* slate-600 */
+            font-family: monospace;
+            font-size: 0.75rem;
+            background-color: #f1f5f9;
+            color: #475569;
             padding: 2px 8px;
-            border-radius: 9999px; /* rounded-full */
+            border-radius: 9999px;
             font-weight: 500;
         }
         .gradient-bg-section h2, .gradient-bg-section > div > .text-center > p {
              color: white;
         }
         .gradient-bg-section .bonus-card h3, .gradient-bg-section .bonus-card p {
-            color: #1e293b; /* slate-800 for card text */
+            color: #1e293b;
         }
          .gradient-bg-section .bonus-card .platform-tag {
-              background-color: #f1f5f9; /* slate-100 */
-              color: #475569; /* slate-600 */
-         }
-          .gradient-bg-section .bonus-card span[class*="bg-yellow-100"] {
-             background-color: #fef9c3; /* Adjust icon background */
-             color: #ca8a04; /* Adjust icon color */
+              background-color: #f1f5f9;
+              color: #475569;
          }
         .concluding-message h3 {
-             color: #1e293b !important; /* slate-800 */
+             color: #1e293b !important;
         }
         .concluding-message p {
-             color: #475569 !important; /* slate-600 */
+             color: #475569 !important;
         }
-
     </style>
 </head>
 <body class="text-slate-800">
@@ -223,10 +177,10 @@
             <div class="hidden lg:flex items-center space-x-6 space-x-reverse text-white font-medium">
                 <a href="#video" class="hover:text-yellow-300 transition-colors">الفيديو التعريفي</a>
                 <a href="#why-join" class="hover:text-yellow-300 transition-colors">ليه تشترك؟</a>
-                <a href="#what-you-learn" class="hover:text-yellow-300 transition-colors">المهارات المكتسبة</a>
+                <a href="#tracks" class="hover:text-yellow-300 transition-colors">مسارات الكورس</a>
                 <a href="#bonus" class="hover:text-yellow-300 transition-colors">البونص الحصري</a>
                 <a href="#about" class="hover:text-yellow-300 transition-colors">عن المحاضر</a>
-                 <a href="#testimonials" class="hover:text-yellow-300 transition-colors">آراء المشتركين</a>
+                <a href="#testimonials" class="hover:text-yellow-300 transition-colors">آراء المشتركين</a>
                 <a href="#faq" class="hover:text-yellow-300 transition-colors">أسئلة شائعة</a>
                 <a href="#subscribe" class="bg-yellow-400 text-teal-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                     انضم الآن
@@ -257,7 +211,6 @@
         </div>
     </section>
 
-    <!-- Main Content - Reordered Sections -->
     <main class="container mx-auto px-4 sm:px-8 -mt-16">
 
         <!-- Promotional Video Section -->
@@ -309,70 +262,111 @@
             </div>
         </section>
 
-        <!-- What You'll Learn Section (Skills) -->
-        <section id="what-you-learn" class="mb-24">
+        <!-- Course Tracks Section (NEWLY RESTRUCTURED) -->
+        <section id="tracks" class="mb-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-slate-800">المهارات اللي هتكتسبها</h2>
-                    <p class="text-slate-600 mt-2 max-w-3xl mx-auto">الكورس ده مش نظري، دي مجموعة مهارات عملية هتستخدمها من أول يوم.</p>
+                    <h2 class="text-3xl font-bold text-slate-800">مسارات كورس Smarter With Ai</h2>
+                    <p class="text-slate-600 mt-4 max-w-3xl mx-auto text-lg leading-relaxed">
+                        بعد إعادة هيكلة المحتوى، بقينا مقدمين مسارات واضحة تناسب كل مرحلة، علشان كل شخص يبدأ من المكان المناسب ليه فعلًا.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-comments"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">هندسة الأوامر</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Level 1: Foundation -->
+                    <div class="track-card p-8 rounded-2xl border-t-8 border-green-500 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-green-600 bg-green-50 px-3 py-1 rounded-full font-bold text-sm">المستوى التأسيسي</span>
+                            <i class="fas fa-seedling text-green-500 text-3xl"></i>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتتعلم إزاي "تتكلم" مع الـ AI صح عشان تطلع منه أحسن النتايج اللي محتاجها بالظبط.</p>
-                    </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="150">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-search"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">البحث الذكي</h3>
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-4">Smarter Learning With Ai</h3>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-slate-700 mb-2">مناسب لـ:</h4>
+                            <p class="text-slate-600">المبتدئين أو أي شخص عايز يفهم الذكاء الاصطناعي من الأساس ويستخدمه بشكل عملي.</p>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتعرف إزاي تدور على أي معلومة وتوصلها في ثواني، وتلخص أي محتوى مهما كان طويل.</p>
-                    </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-robot"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">بناء مساعدك الشخصي</h3>
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-slate-700 mb-3">المحتوى:</h4>
+                            <ul class="space-y-2 text-slate-600 mb-8">
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>مقدمة عن الذكاء الاصطناعي التوليدي</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>إزاي تتواصل صح مع أدوات الـ AI</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>البحث وإنجاز التاسكات اليومية بمساعدة AI</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>التعلّم بذكاء وتنظيم المعرفة</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>تحويل المعلومات لإنفوجرافيك وبريزنتيشن</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>بناء مساعدين شخصيين للدراسة والشغل</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-2"></i><span>مدخل لتصميم الصور والفيديوهات بالـ AI</span></li>
+                            </ul>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتبني "عقلك الرقمي" اللي بينظم أفكارك وملاحظاتك ويساعدك تذاكر وتشتغل بكفاءة أعلى.</p>
-                    </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="250">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-magic"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">إنشاء المحتوى الإبداعي</h3>
+                        <div class="bg-slate-50 p-4 rounded-xl mt-auto">
+                            <p class="text-sm font-bold text-slate-700 mb-1">نظام الدراسة:</p>
+                            <p class="text-sm text-slate-600">محاضرات مسجّلة + تاسكات عملية + متابعة مستمرة</p>
+                            <p class="text-xs text-green-600 font-bold mt-2">التسجيل متاح في أي وقت ويبدأ فورًا</p>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتحول أفكارك لمحتوى احترافي (عروض تقديمية، صور، فيديوهات) من غير ما تحتاج تكون خبير.</p>
                     </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-book-open"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">بناء نظام مذاكرتك</h3>
+
+                    <!-- Level 2: Advanced -->
+                    <div class="track-card p-8 rounded-2xl border-t-8 border-blue-500 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-blue-600 bg-blue-50 px-3 py-1 rounded-full font-bold text-sm">المستوى المتقدم</span>
+                            <i class="fas fa-rocket text-blue-500 text-3xl"></i>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتبني سيستم يحول أي محتوى صعب لملخص أو خريطة ذهنية، وتقدر تتكلم معاه وتسأله.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="350">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-laptop-code"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">صناعة المواقع والتطبيقات</h3>
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-4">Advanced Track</h3>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-slate-700 mb-2">مناسب لـ:</h4>
+                            <p class="text-slate-600">اللي خلص المستوى التأسيسي أو عنده أساسيات وعايز تطبيق عملي حقيقي.</p>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتعمل مواقع وتطبيقات تفاعلية بنفسك عشان تعرض شغلك، وكمان تقدر تبني كويزات وألعاب بسيطة، كل ده من غير أي خبرة برمجية.</p>
-                    </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-toolbox"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">صندوق أدواتك الذكي</h3>
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-slate-700 mb-3">المحتوى:</h4>
+                            <ul class="space-y-2 text-slate-600 mb-8">
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>تصميم صور احترافية بالذكاء الاصطناعي</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>إنشاء فيديوهات باستخدام AI</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>بناء مواقع بدون خبرة برمجية</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>أتمتة المهام وأدوات ذكية للشغل</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>كتابة محتوى وإعلانات باستخدام AI</span></li>
+                                <li class="flex items-start"><i class="fas fa-check text-blue-500 mt-1 ml-2"></i><span>تطبيقات عملية من شغل حقيقي</span></li>
+                            </ul>
                         </div>
-                        <p class="text-slate-600 flex-grow">مش هتحتار تاني. هتعرف بالظبط امتى وفين تستخدم كل أداة عشان تنجز أي مهمة بكفاءة.</p>
-                    </div>
-                     <div class="bg-white p-6 rounded-2xl skill-card" data-aos="fade-up" data-aos-delay="450">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-teal-100 text-teal-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-chart-line"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">تحليل البيانات</h3>
+                        <div class="bg-slate-50 p-4 rounded-xl mt-auto">
+                            <p class="text-sm font-bold text-slate-700 mb-1">نظام الدراسة:</p>
+                            <p class="text-sm text-slate-600">محاضرات مسجّلة + لايف أسبوعي + تاسكات تطبيقية</p>
                         </div>
-                        <p class="text-slate-600 flex-grow">هتقدر تفهم أي أرقام أو داتا قدامك وتطلع منها بمعلومات تساعدك تاخد قرارات صح.</p>
                     </div>
+
+                    <!-- Level 3: Diploma (Featured) -->
+                    <div class="track-card p-8 rounded-2xl border-t-8 border-purple-500 bg-purple-50/30 flex flex-col h-full shadow-xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-purple-600 bg-purple-100 px-3 py-1 rounded-full font-bold text-sm">التجربة الكاملة</span>
+                            <i class="fas fa-graduation-cap text-purple-500 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-extrabold text-slate-800 mb-4">Smarter With Ai Diploma</h3>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-slate-700 mb-2">مناسبة لـ:</h4>
+                            <p class="text-slate-600 font-medium">اللي عايز تجربة شاملة من البداية للنهاية ويوفّر بدل الاشتراك في كل مسار لوحده.</p>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-slate-700 mb-3 text-lg underline decoration-purple-400">تشمل:</h4>
+                            <ul class="space-y-4 text-slate-800 mb-8 font-semibold">
+                                <li class="flex items-center"><i class="fas fa-layer-group text-purple-600 ml-3"></i><span>كل محتوى المستوى التأسيسي</span></li>
+                                <li class="flex items-center"><i class="fas fa-layer-group text-purple-600 ml-3"></i><span>كل محتوى المستوى المتقدم</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-600 text-white p-5 rounded-xl mt-auto shadow-lg">
+                            <p class="text-sm font-bold mb-2 flex items-center"><i class="fas fa-star text-yellow-300 ml-2"></i> نظام الدراسة المميز:</p>
+                            <ul class="text-sm space-y-1 opacity-90 pr-4">
+                                <li>- محاضرات مسجّلة + لايف أسبوعي</li>
+                                <li>- تاسكات ومشاريع تطبيقية</li>
+                                <li>- متابعة مستمرة والرد على كل الأسئلة</li>
+                            </ul>
+                            <p class="text-center font-bold text-lg mt-3 text-yellow-300">متاح التقسيط 💳</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center" data-aos="fade-up">
+                    <p class="text-2xl font-bold text-teal-800 mb-2">الهدف من الكورس:</p>
+                    <p class="text-xl text-slate-600 max-w-2xl mx-auto italic leading-relaxed">
+                        "مش مجرد تعلم أدوات، لكن إنك تطلع فاهم إزاي تستخدم الذكاء الاصطناعي بذكاء في شغلك، دراستك، وحياتك اليومية."
+                    </p>
                 </div>
             </div>
         </section>
@@ -384,7 +378,7 @@
                     <h2 class="text-3xl font-bold text-white">🎁 بونص حصري: جيش المساعدين الشخصيين</h2>
                     <p class="text-slate-200 mt-2 max-w-3xl mx-auto">مش هتاخد الكورس بس، هتاخد معاه فريق كامل من المساعدين جاهزين يخدموك 24/7.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-right">
                     <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center mb-4">
                            <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-comments"></i></span>
@@ -433,56 +427,8 @@
                         <p class="text-slate-600 flex-grow mb-4">بيساعدك تعمل برزينتيشن احترافية جدا لما معاك محتوي او مصدر او عاوز تبحث.</p>
                         <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
                     </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-chart-pie"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Infographic Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">هدفه مساعدتك في عمل انفوجرافيك احترافية من اي نص معاك او محاضرة او كتاب.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="150">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-image"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Image Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">خاص بكتابة اوامر احترافية لانشاء الصور واستخراج الاوامر والبرومبت من الصور.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-video"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Video Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">لعمل اوامر احترافية لانشاء فيديوهات وعمل مشاهد وقصص كاملة.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="250">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-gem"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Gem Builder Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">بيساعدك تبني اي مساعد شخصي (Custom Gem/GPT) بشكل ذكي وكفء وسريع.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-laptop-code"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Web/App Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">مساعد خاص بيساعدك في انشاء المواقع والتطبيقات بدون خبرة برمجية.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
-                    <div class="p-6 rounded-2xl bonus-card" data-aos="fade-up" data-aos-delay="350">
-                        <div class="flex items-center mb-4">
-                           <span class="bg-yellow-100 text-yellow-600 font-bold rounded-full w-12 h-12 flex items-center justify-center text-xl shadow flex-shrink-0"><i class="fas fa-bullhorn"></i></span>
-                           <h3 class="text-xl font-bold mr-4 text-slate-800">Marketing Mood</h3>
-                        </div>
-                        <p class="text-slate-600 flex-grow mb-4">بيساعدك تعمل خطط تسويق وتكتب محتوى إعلاني لمنتجك أو خدمتك.</p>
-                        <div class="flex gap-2"><span class="platform-tag">GPT</span><span class="platform-tag">Gemini</span></div>
-                    </div>
                 </div>
-                <div class="mt-12 text-center bg-white p-6 rounded-2xl shadow-xl border concluding-message" data-aos="fade-up" data-aos-delay="400">
+                <div class="mt-12 text-center bg-white p-8 rounded-2xl shadow-xl border concluding-message" data-aos="fade-up" data-aos-delay="400">
                      <h3 class="text-2xl font-bold text-slate-800 mb-3">مش بس كده!</h3>
                      <p class="text-slate-700 max-w-3xl mx-auto text-lg">
                          بنهاية الكورس، مش بس هتاخد كل المساعدين دول، إحنا هنعلمك إزاي تبني مساعدينك بنفسك لأي مهمة تحتاجها. القايمة دي بتتحدث باستمرار، وبنزود كفاءتها، وبنضيف مساعدين جداد عشان نفضل دايماً سابقين بخطوة.
@@ -505,28 +451,22 @@
                         </div>
                     </div>
                     <div class="md:w-2/3">
-                        <h2 class="text-3xl font-bold text-slate-800 mb-4">اعرف أكتر عن المحاضر</h2>
-                        <div class="text-slate-700 leading-relaxed space-y-4">
-                            <p>
-                               أنا محمود حرب، طبيب أسنان، لكن شغفي بالتعلم خدني لمجالات تانية كتير، أهمها كان الذكاء الاصطناعي. من كتر حبي للمجال ده، اشتغلت كمدرب AI وبقيت بتابع كل جديد فيه أول بأول.
-                            </p>
-                            <p>
-                                كنت دايمًا بلاحظ إن الناس حواليا يا إما بتخاف من الـ AI أو مش عارفة تبدأ منين. عشان كده، عملت "Smarter With AI". الهدف هنا مش بس أعلمك تستخدم أدوات، الهدف إني أساعدك تغير طريقة تفكيرك وتخلي الـ AI شريك ليك في شغلك ومذاكرتك وحياتك. 
-                            </p>
-                            <p class="font-semibold text-slate-800">
-                                أنا متحمس جدًا للرحلة دي معاك، ومستعدين نفتح سوا أبواب وفرص عمرها ما كانت هتخطر على بالك!
-                            </p>
+                        <h2 class="text-3xl font-bold text-slate-800 mb-4 text-right">اعرف أكتر عن المحاضر</h2>
+                        <div class="text-slate-700 leading-relaxed space-y-4 text-right">
+                            <p>أنا محمود حرب، طبيب أسنان، شغفي بالتعلم خدني لمجالات تانية كتير، أهمها كان الذكاء الاصطناعي. من كتر حبي للمجال ده، اشتغلت كمدرب AI وبقيت بتابع كل جديد فيه أول بأول.</p>
+                            <p>كنت دايمًا بلاحظ إن الناس حواليا يا إما بتخاف من الـ AI أو مش عارفة تبدأ منين. عشان كده، عملت "Smarter With AI". الهدف هنا مش بس أعلمك تستخدم أدوات، الهدف إني أساعدك تغير طريقة تفكيرك وتخلي الـ AI شريك ليك في شغلك ومذاكرتك وحياتك.</p>
+                            <p class="font-semibold text-slate-800">أنا متحمس جدًا للرحلة دي معاك، ومستعدين نفتح سوا أبواب وفرص عمرها ما كانت هتخطر على بالك!</p>
                         </div>
                     </div>
                  </div>
              </div>
         </section>
 
-        <!-- Testimonials/Success Story Section - Updated with Feedback -->
-        <section id="testimonials" class="mb-24 py-20 gradient-bg-testimonials rounded-3xl">
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="mb-24 py-20 gradient-bg-testimonials rounded-3xl shadow-xl">
              <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
                  <h2 class="text-3xl font-bold text-center mb-12 text-white">⭐ آراء بعض المشتركين</h2>
-                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
                      <div class="p-8 rounded-2xl shadow-lg border testimonial-card" data-aos="fade-up" data-aos-delay="100">
                          <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
                          <p class="text-slate-600 flex-grow mb-6 leading-relaxed">"الكورس مفيد جدا جدا حقيقي و استفدت منه و الشرح استثنائي و مبسط بشكل كبير لأي حد لسه مش متعمق في المجال"</p>
@@ -543,12 +483,12 @@
             </div>
         </section>
         
-        <!-- FAQ Section - Moved Here -->
-        <section id="faq" class="py-20 bg-slate-50 mb-24">
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-slate-50 mb-24 rounded-3xl">
             <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
                 <div class="text-center mb-12">
                      <h2 class="text-3xl font-bold text-slate-800">أسئلة شائعة</h2>
-                     <p class="text-slate-600 mt-2">كل اللي محتاج تعرفه عن الكورس</p>
+                     <p class="text-slate-600 mt-2 text-lg">كل اللي محتاج تعرفه عن الكورس</p>
                 </div>
                 <div class="space-y-4">
                      <div class="rounded-lg shadow-md border bg-white overflow-hidden">
@@ -561,71 +501,33 @@
                                 <p>هدفنا نساعدك تستخدم الـ AI صح في مذاكرتك، شغلك، وحياتك. وده من خلال:</p>
                                 <ul class="space-y-2 pr-4">
                                     <li class="flex items-start"><i class="fas fa-check text-teal-500 mt-1 ml-3"></i><span>محاضرات مسجلة سهلة وبسيطة.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check text-teal-500 mt-1 ml-3"></i><span>جلسات تفاعلية عشان نجاوب على كل أسئلتك.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check text-teal-500 mt-1 ml-3"></i><span>مجتمع خاص عشان تشارك تطبيقاتك وإبداعاتك.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check text-teal-500 mt-1 ml-3"></i><span>جلسات تفاعلية (لايف) للمسار المتقدم والدبلومة.</span></li>
+                                    <li class="flex items-start"><i class="fas fa-check text-teal-500 mt-1 ml-3"></i><span>مجتمع خاص وتطبيقات عملية مستمرة.</span></li>
                                 </ul>
                              </div>
                         </div>
                     </div>
                      <div class="rounded-lg shadow-md border bg-white overflow-hidden">
                         <button class="accordion-button w-full flex justify-between items-center text-right p-5 font-semibold text-slate-800">
-                            <span>🤔 إيه اللي يميز الكورس ده عن أي كورس تاني؟</span>
+                            <span>🤔 إيه الفرق بين المسارات المتاحة؟</span>
                             <i class="fas fa-chevron-down accordion-icon text-slate-500"></i>
                         </button>
-                        <div class="accordion-content bg-slate-50">
+                        <div class="accordion-content bg-slate-50 text-right">
                              <div class="p-5 text-slate-600 space-y-4">
-                                <div class="flex items-start space-x-3 space-x-reverse">
-                                    <i class="fas fa-users text-teal-500 mt-1 text-lg"></i>
-                                    <div>
-                                        <strong class="text-slate-700">مجتمع متكامل:</strong> إحنا هنا أكبر من مجرد كورس، إحنا أسرة ومجتمع بنشارك بعض خبراتنا وبنتعرف على بعض.
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3 space-x-reverse">
-                                    <i class="fas fa-tasks text-teal-500 mt-1 text-lg"></i>
-                                    <div>
-                                        <strong class="text-slate-700">تطبيقي 100%:</strong> بعد كل محاضرة في تاسكات مطلوبة ومشاريع تخرج في النهاية عشان تضمن إنك طبقت كل حاجة بنفسك.
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3 space-x-reverse">
-                                    <i class="fas fa-video text-teal-500 mt-1 text-lg"></i>
-                                    <div>
-                                        <strong class="text-slate-700">مرونة ومتابعة:</strong> المحاضرات مسجلة وتقدر ترجعلها في أي وقت يناسبك.
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3 space-x-reverse">
-                                    <i class="fas fa-gift text-teal-500 mt-1 text-lg"></i>
-                                    <div>
-                                        <strong class="text-slate-700">جوائز تحفيزية:</strong> هيكون في هدايا وجوايز قيمة لأفضل المشاركين، وممكن تكون انت واحد منهم!
-                                    </div>
-                                </div>
+                                <p><strong>🟢 التأسيسي:</strong> للبداية من الصفر وفهم القواعد والبحث والتنظيم.</p>
+                                <p><strong>🔵 المتقدم:</strong> للتركيز على الصور، الفيديو، الأتمتة، وبناء المواقع.</p>
+                                <p><strong>🟣 الدبلومة:</strong> بتجمع الاتنين وبسعر أوفر مع نظام تقسيط مريح.</p>
                             </div>
                         </div>
                     </div>
                     <div class="rounded-lg shadow-md border bg-white overflow-hidden">
                         <button class="accordion-button w-full flex justify-between items-center text-right p-5 font-semibold text-slate-800">
-                            <span>⏰ إيه نظام الكورس والمواعيد؟</span>
+                            <span>⏰ إيه نظام المواعيد؟</span>
                             <i class="fas fa-chevron-down accordion-icon text-slate-500"></i>
                         </button>
                         <div class="accordion-content bg-slate-50">
                             <div class="p-5 text-slate-600 space-y-4">
-                                <div class="flex items-start"><i class="fas fa-video text-teal-500 mt-1 ml-3"></i><div><strong>محاضرات مسجلة:</strong> بتنزل كل أسبوع عشان تشوفها براحتك.</div></div>
-                                <div class="flex items-start"><i class="fas fa-tasks text-teal-500 mt-1 ml-3"></i><div><strong>تاسكات تطبيقية:</strong> بعد كل محاضرة في مهمة عشان تطبق اللي اتعلمته.</div></div>
-                                <div class="flex items-start"><i class="fas fa-microphone text-teal-500 mt-1 ml-3"></i><div><strong>جلسة تفاعلية:</strong> معادنا آخر كل أسبوع عشان نناقش كل حاجة.</div></div>
-                                <div class="flex items-start"><i class="fas fa-comments text-teal-500 mt-1 ml-3"></i><div><strong>جروب للأسئلة:</strong> عندك سؤال في أي وقت؟ اسأل وهنجاوب عليك في الجروب أو في الجلسة التفاعلية.</div></div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="rounded-lg shadow-md border bg-white overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center text-right p-5 font-semibold text-slate-800">
-                            <span>📋 إيه المطلوب مني كمشترك؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-slate-500"></i>
-                        </button>
-                        <div class="accordion-content bg-slate-50">
-                            <div class="p-5 text-slate-600 space-y-4">
-                                <div class="flex items-start"><i class="fas fa-headphones text-teal-500 mt-1 ml-3"></i><span>تتابع المحاضرات بانتظام عشان ماتفوتكش حاجة.</span></div>
-                                <div class="flex items-start"><i class="fas fa-fire text-teal-500 mt-1 ml-3"></i><span>الكورس مش محتاج منك غير الجدية والحماس للتعلم.</span></div>
-                                <div class="flex items-start"><i class="fas fa-check-double text-teal-500 mt-1 ml-3"></i><span>تطبّق أول بأول وتشاركنا نتايجك.</span></div>
-                                <div class="flex items-start"><i class="fas fa-question-circle text-teal-500 mt-1 ml-3"></i><span>تسأل لما تقابلك أي صعوبة - إحنا هنا عشان نساعدك.</span></div>
+                                <p>المحاضرات مسجلة وتقدر تشوفها في أي وقت. بالنسبة للمسار المتقدم والدبلومة، بيكون فيه لايف أسبوعي للمناقشة والتطبيق العملي، وبنعلن عن ميعاده في جروب الكورس.</p>
                             </div>
                         </div>
                     </div>
@@ -633,26 +535,28 @@
             </div>
         </section>
 
-        <!-- Subscription Section - Moved after FAQ -->
-        <section id="subscribe">
+        <!-- Subscription Section -->
+        <section id="subscribe" class="mb-24">
             <div class="bg-gradient-to-br from-teal-700 to-teal-900 p-8 sm:p-12 rounded-2xl shadow-2xl max-w-4xl mx-auto text-white" data-aos="zoom-in">
                 <div class="text-center">
-                    <h2 class="text-4xl font-extrabold">جاهز تنضم لأسرة Smarter With Ai؟</h2>
-                    <div class="text-slate-200 text-lg mt-3 mb-6 max-w-2xl mx-auto">
-                        <p>🚀 التسجيل مفتوح للدفعات الجديدة.</p>
-                        <p>ابدأ رحلتك دلوقتي!</p>
+                    <h2 class="text-4xl font-extrabold mb-4">جاهز تنضم لأسرة Smarter With Ai؟</h2>
+                    <div class="text-slate-200 text-lg mb-8 max-w-2xl mx-auto">
+                        <p class="mb-2 font-bold text-yellow-300">🚀 التسجيل مفتوح للدفعات الجديدة.</p>
+                        <p>ابدأ رحلتك في تعلم الذكاء الاصطناعي دلوقتي!</p>
                     </div>
-                     <a href="https://wa.me/201007964766" target="_blank" class="w-full max-w-sm mx-auto inline-block bg-green-500 text-white font-bold py-4 px-8 rounded-md hover:bg-green-600 transition-colors duration-300 shadow-lg text-lg">
-                        <i class="fab fa-whatsapp mr-2"></i>
+                     <a href="https://wa.me/201007964766" target="_blank" class="w-full max-w-sm mx-auto flex items-center justify-center bg-green-500 text-white font-extrabold py-4 px-8 rounded-xl hover:bg-green-600 transition-all duration-300 shadow-lg text-xl transform hover:scale-105">
+                        <i class="fab fa-whatsapp ml-3 text-2xl"></i>
                         تواصل للاشتراك والاستفسار
                     </a>
+                    <p class="mt-4 text-slate-300 text-sm italic">متاح أنظمة تقسيط مريحة للدبلومة الكاملة</p>
                 </div>
             </div>
         </section>
 
     </main>
     
-    <!-- Footer --><footer class="bg-slate-900 text-white pt-16 pb-8 mt-24">
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 mt-24">
         <div class="container mx-auto px-4 text-center">
             <a href="#" class="mb-4 inline-block">
                  <div class="logo-container mx-auto">
@@ -704,7 +608,6 @@
                 }
             });
         });
-
     </script>
 </body>
 </html>
