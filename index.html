@@ -65,12 +65,18 @@
             transform: scale(1.05);
             z-index: 10;
         }
-        #testimonials.gradient-bg-testimonials {
+        .gradient-bg-custom {
             background-image: linear-gradient(to top left, #a7f3d0, #5eead4, #0d9488);
         }
         .testimonial-card {
             background-color: rgba(255, 255, 255, 0.95);
             border-right: 4px solid var(--teal-light);
+        }
+        /* Fixed Accordion CSS */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
         }
         .accordion-button.active .accordion-icon {
             transform: rotate(180deg);
@@ -235,7 +241,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Card 1 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border border-slate-200 text-center shadow-sm hover:border-teal-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-teal-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
                         <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
                             <i class="fas fa-user-graduate"></i>
                         </div>
@@ -243,7 +249,7 @@
                         <p class="text-slate-600 text-sm leading-relaxed">لخص مئات الصفحات، اعمل كويزات لنفسك، احصل على مصادر دقيقة، وافهم المعقد بسهولة تامة.</p>
                     </div>
                     <!-- Card 2 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border border-slate-200 text-center shadow-sm hover:border-blue-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-blue-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
                         <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
                             <i class="fas fa-video"></i>
                         </div>
@@ -251,7 +257,7 @@
                         <p class="text-slate-600 text-sm leading-relaxed">اكتب سكريبتات أسرع، حول محتواك لبودكاست، اعمل فيديوهات احترافية، وزود التفاعل مع جمهورك.</p>
                     </div>
                     <!-- Card 3 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border border-slate-200 text-center shadow-sm hover:border-purple-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-purple-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="300">
                         <div class="w-20 h-20 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
                             <i class="fas fa-paint-brush"></i>
                         </div>
@@ -259,7 +265,7 @@
                         <p class="text-slate-600 text-sm leading-relaxed">اعمل عروض احترافية، صمم صور ولوجوهات، أنتج فيديوهات إعلانية، وسلم شغل ينافس وكالات كبيرة.</p>
                     </div>
                     <!-- Card 4 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border border-slate-200 text-center shadow-sm hover:border-amber-500" data-aos="fade-up" data-aos-delay="400">
+                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-amber-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="400">
                         <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
                             <i class="fas fa-briefcase"></i>
                         </div>
@@ -336,7 +342,7 @@
                     <!-- Step 1 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
-                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-teal-300">
+                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-teal-500 shadow-md">
                             <h3 class="text-xl font-bold mb-3 text-teal-700">الأساسيات والبحث العميق</h3>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                                 <li>التعرف على أنواع الذكاء الاصطناعي</li>
@@ -349,7 +355,7 @@
                     <!-- Step 2 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
-                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-300">
+                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-blue-500 shadow-md">
                             <h3 class="text-xl font-bold mb-3 text-blue-700">التعلم الفائق والمحتوى المرئي</h3>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                                 <li>تصميم Presentations تدعم العربي</li>
@@ -362,7 +368,7 @@
                     <!-- Step 3 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="200">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
-                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-purple-300">
+                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-purple-500 shadow-md">
                             <h3 class="text-xl font-bold mb-3 text-purple-700">السحر البصري والصوتي</h3>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                                 <li>احتراف Midjourney & Nano Banana</li>
@@ -376,7 +382,7 @@
                     <!-- Step 4 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
-                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-amber-300">
+                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-amber-500 shadow-md">
                             <h3 class="text-xl font-bold mb-3 text-amber-700">البرمجة بدون كود (Vibe Coding)</h3>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                                 <li>بناء موقع كامل بدون كتابة سطر كود واحد</li>
@@ -389,7 +395,7 @@
                     <!-- Step 5 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="400">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-800 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">5</div>
-                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-teal-800">
+                        <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-teal-800 shadow-md">
                             <h3 class="text-xl font-bold mb-3 text-teal-900">وكلاء الذكاء الاصطناعي (AI Agents)</h3>
                             <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
                                 <li>بناء Custom GPTs خاصة بيك</li>
@@ -460,11 +466,10 @@
         </section>
 
         <!-- 7. Feedback Section (LIGHT GREEN/TEAL GRADIENT - Color Break) -->
-        <section id="testimonials" class="py-24 gradient-bg-testimonials">
+        <section id="testimonials" class="py-24 gradient-bg-custom">
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">آراء شركاء النجاح من الدفعات السابقة</h2>
-                    <p class="text-teal-900 font-bold text-lg">💬 مش كلام تسويقي… شوف اللي حصل معاهم</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2">آراء شركاء النجاح من الدفعات السابقة</h2>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
@@ -662,90 +667,120 @@
         <!-- 10. FAQ Section (WHITE BG) -->
         <section id="faq" class="py-24 bg-white border-t border-slate-200">
             <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-16 text-slate-800">كل اللي بيدور في دماغك.. إجابته هنا <span class="text-red-500">؟</span></h2>
-                <div class="space-y-4 text-right">
-                    
-                    <!-- FAQ 1 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>🤔 إيه الفرق بين المسارات المتاحة؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <div class="p-6 text-slate-600 leading-relaxed font-medium space-y-3">
-                                <p><strong>🟢 التأسيسي:</strong> للبداية من الصفر وفهم القواعد والبحث والتنظيم.</p>
-                                <p><strong>🔵 المتقدم:</strong> للتركيز على صناعة المحتوى، الفيديو، الأتمتة، وبناء المواقع.</p>
-                                <p><strong>🟣 الدبلومة:</strong> بتجمع الاتنين وبسعر أوفر مع نظام تقسيط مريح.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-slate-800">كل اللي بيدور في دماغك.. إجابته هنا <span class="text-red-500">؟</span></h2>
+                
+                <!-- Frame around all FAQs -->
+                <div class="bg-white p-4 md:p-8 rounded-[2rem] shadow-xl border-2 border-teal-100">
+                    <div class="space-y-4 text-right">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">🤔 إيه الفرق بين المسارات المتاحة؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium space-y-3 bg-white border-t border-slate-200">
+                                    <p><strong>🟢 التأسيسي:</strong> للبداية من الصفر وفهم القواعد والبحث والتنظيم.</p>
+                                    <p><strong>🔵 المتقدم:</strong> للتركيز على صناعة المحتوى، الفيديو، الأتمتة، وبناء المواقع.</p>
+                                    <p><strong>🟣 الدبلومة:</strong> بتجمع الاتنين وبسعر أوفر مع نظام تقسيط مريح.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 2 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>إيه اللي يخليني أختار الدبلومة الشاملة بدل المسار التأسيسي؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">الدبلومة الشاملة هي "الرحلة الكاملة". بتاخد فيها كل حاجة (المحتوى البصري، الصوتي، المساعدين الشخصيين، البرمجة) زائد المتابعة المباشرة واللايف والتفاعل المستمر. المسار التأسيسي ممتاز لو حابب مجرد تأخذ فكرة مسجلة عن الأساسيات.</p>
+                        <!-- FAQ 2 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">إيه اللي يخليني أختار الدبلومة الشاملة بدل المسار التأسيسي؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>الدبلومة الشاملة هي "الرحلة الكاملة". بتاخد فيها كل حاجة (المحتوى البصري، الصوتي، المساعدين الشخصيين، البرمجة) زائد المتابعة المباشرة واللايف والتفاعل المستمر. المسار التأسيسي ممتاز لو حابب مجرد تأخذ فكرة مسجلة عن الأساسيات.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 3 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>المحاضرات بتكون Live ولا مسجلة؟ ولو فاتني اللايف أعمل إيه؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">في مسار الدبلومة الشاملة، المحاضرات بتكون Live عشان نتفاعل ونطبق سوا. بس متقلقش، كل محاضرة بتتسجل وبتنزل فوراً على "تطبيق الكورس" عشان ترجعلها في أي وقت وتراجع منها براحتك.</p>
+                        <!-- FAQ 3 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">المحاضرات بتكون Live ولا مسجلة؟ ولو فاتني اللايف أعمل إيه؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>في مسار الدبلومة الشاملة، المحاضرات بتكون Live عشان نتفاعل ونطبق سوا. بس متقلقش، كل محاضرة بتتسجل وبتنزل فوراً على "تطبيق الكورس" عشان ترجعلها في أي وقت وتراجع منها براحتك.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 4 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>إزاي بتأكد إني فهمت وبطبق صح؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">عشان كده عملنا نظام (الـ Tasks). بعد كل محاضرة في تطبيق عملي بتعمله وبنتابعه معاك ونديك Feedback. كمان التزامك بالتاسكات بيديك نقاط بتتحول لهدايا ومكافآت!</p>
+                        <!-- FAQ 4 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">إزاي بتأكد إني فهمت وبطبق صح؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>عشان كده عملنا نظام (الـ Tasks). بعد كل محاضرة في تطبيق عملي بتعمله وبنتابعه معاك ونديك Feedback. كمان التزامك بالتاسكات بيديك نقاط بتتحول لهدايا ومكافآت!</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 5 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>هل هحتاج أدفع اشتراكات شهرية في أدوات الذكاء الاصطناعي؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">إحنا بنركز على الأدوات المجانية بحيث الموضوع يعتمد على استخدامك وبتحتاجه في إيه. وكمان انتظامك في التاسكات بيخليك تكسب هدايا معانا زي اشتراكات مدفوعة (Google Pro مثلاً) وهدايا تانية كتير! ومعلومة مهمة: إحنا بنشرح كل مميزات الأدوات سواء المتواجدة في النسخة المجانية أو المدفوعة، وده ضروري عشان لو اشتركت تستفاد بكل الإمكانيات وتبقى عارف الاستخدامات الكاملة لكل أداة.</p>
+                        <!-- FAQ 5 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">هل هحتاج أدفع اشتراكات شهرية في أدوات الذكاء الاصطناعي؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>إحنا بنركز على الأدوات المجانية بحيث الموضوع يعتمد على استخدامك وبتحتاجه في إيه. وكمان انتظامك في التاسكات بيخليك تكسب هدايا معانا زي اشتراكات مدفوعة (Google Pro مثلاً) وهدايا تانية كتير! ومعلومة مهمة: إحنا بنشرح كل مميزات الأدوات سواء المتواجدة في النسخة المجانية أو المدفوعة، وده ضروري عشان لو اشتركت تستفاد بكل الإمكانيات وتبقى عارف الاستخدامات الكاملة لكل أداة.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 6 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>هل الكورس ده محتاج أكون شاطر في الإنجليزي أو البرمجة؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">إطلاقاً! الكورس بيبدأ معاك من الصفر تماماً. وكل الأدوات اللي بنشرحها بنركز جداً على إنها تكون بتدعم اللغة العربية بكفاءة عالية، ومش هنكتب سطر كود واحد.</p>
+                        <!-- FAQ 6 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">هل الكورس ده محتاج أكون شاطر في الإنجليزي أو البرمجة؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>إطلاقاً! الكورس بيبدأ معاك من الصفر تماماً. وكل الأدوات اللي بنشرحها بنركز جداً على إنها تكون بتدعم اللغة العربية بكفاءة عالية، ومش هنكتب سطر كود واحد.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- FAQ 7 -->
-                    <div class="rounded-2xl shadow-sm border border-slate-200 bg-slate-50 overflow-hidden">
-                        <button class="accordion-button w-full flex justify-between items-center p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                            <span>علاقتي بالكورس بتنتهي بعد الشهرين؟</span>
-                            <i class="fas fa-chevron-down accordion-icon text-teal-500 transition-transform"></i>
-                        </button>
-                        <div class="accordion-content bg-white border-t border-slate-200">
-                            <p class="p-6 text-slate-600 leading-relaxed font-medium">بالعكس، دي بتبدأ! بمجرد تخرجك بتنضم لـ "مجتمع خريجين Smarter With AI"، بيكون فيه لايف دوري، ومشاركة للتحديثات المستمرة عشان نفضل دايماً مواكبين التطور وفي ضهر بعض.</p>
+                        <!-- FAQ 7 -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">علاقتي بالكورس بتنتهي بعد الشهرين؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>بالعكس، دي بتبدأ! بمجرد تخرجك بتنضم لـ "مجتمع خريجين Smarter With AI"، بيكون فيه لايف دوري، ومشاركة للتحديثات المستمرة عشان نفضل دايماً مواكبين التطور وفي ضهر بعض.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </section>
@@ -777,25 +812,23 @@
             header.classList.toggle('bg-teal-900', window.scrollY > 50);
         });
         
+        // Fixed Accordion Logic
         const accordionButtons = document.querySelectorAll('.accordion-button');
         accordionButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const content = button.nextElementSibling;
                 const wasActive = button.classList.contains('active');
                 
+                // Close all other accordions
                 accordionButtons.forEach(b => {
-                    if (b !== button) {
-                        b.classList.remove('active');
-                        b.nextElementSibling.style.maxHeight = null;
-                    }
+                    b.classList.remove('active');
+                    b.nextElementSibling.style.maxHeight = null;
                 });
 
+                // Open the clicked one if it wasn't already active
                 if (!wasActive) {
                     button.classList.add('active');
                     content.style.maxHeight = content.scrollHeight + 'px';
-                } else {
-                    button.classList.remove('active');
-                    content.style.maxHeight = null;
                 }
             });
         });
