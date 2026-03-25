@@ -110,6 +110,16 @@
 </head>
 <body class="text-slate-800">
 
+    <!-- Top Promo Banner (Countdown) -->
+    <div id="promo-banner" class="bg-red-600 text-white py-3 px-4 text-center z-[60] relative flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 font-bold text-sm sm:text-base border-b border-red-700 shadow-md">
+        <p>🔥 عرض لفترة محدودة! خصم إضافي على الدبلومة الشاملة (المسار الأكثر مبيعاً) ينتهي خلال:</p>
+        <div class="timer-container flex gap-2 items-center text-lg" dir="ltr">
+            <span class="hours bg-white text-red-600 px-2 py-1 rounded-md shadow-sm font-black">24</span> :
+            <span class="minutes bg-white text-red-600 px-2 py-1 rounded-md shadow-sm font-black">00</span> :
+            <span class="seconds bg-white text-red-600 px-2 py-1 rounded-md shadow-sm font-black">00</span>
+        </div>
+    </div>
+
     <!-- Header -->
     <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 bg-teal-800/95 backdrop-blur-md shadow-lg">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
@@ -184,7 +194,7 @@
             <!-- Promotional Video -->
             <div class="max-w-5xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
                 <div class="video-container shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                    <iframe src="https://www.youtube.com/embed/1TWllndZuFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/RqHk7ogCqrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -380,7 +390,7 @@
                         </div>
                     </div>
 
-                    <!-- Step 4 (NEW) -->
+                    <!-- Step 4 -->
                     <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="300">
                         <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-500 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
                         <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-amber-500 shadow-md">
@@ -659,12 +669,20 @@
                     الدبلومة هي خطوتك الأولى عشان تكون دايمًا سابق بخطوة.
                 </p>
                 
-                <a href="https://wa.me/201007964766" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-400 text-white font-black py-6 px-10 rounded-2xl text-2xl md:text-3xl transition-all duration-300 shadow-[0_0_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-2 w-full max-w-2xl mx-auto mb-6">
+                <a href="https://wa.me/201007964766" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-400 text-white font-black py-6 px-10 rounded-2xl text-2xl md:text-3xl transition-all duration-300 shadow-[0_0_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-2 w-full max-w-2xl mx-auto mb-8">
                     <i class="fab fa-whatsapp ml-4 text-4xl"></i>
                     احجز مقعدك الآن عبر واتساب
                 </a>
                 
-                <p class="text-teal-300 font-bold mb-12 text-lg">المقاعد محدودة في الدفعة القادمة ⏳</p>
+                <!-- Second Timer -->
+                <div class="flex flex-col items-center justify-center mb-12">
+                    <p class="text-teal-300 font-bold mb-3 text-lg">⏳ العرض والمقاعد المحدودة تنتهي خلال:</p>
+                    <div class="timer-container flex gap-3 items-center text-3xl" dir="ltr">
+                        <div class="flex flex-col items-center"><span class="hours bg-red-600 text-white px-4 py-2 rounded-xl shadow-lg font-black">24</span><span class="text-sm text-teal-300 mt-2 font-medium">ساعة</span></div> <span class="text-red-500 font-bold pb-6">:</span>
+                        <div class="flex flex-col items-center"><span class="minutes bg-red-600 text-white px-4 py-2 rounded-xl shadow-lg font-black">00</span><span class="text-sm text-teal-300 mt-2 font-medium">دقيقة</span></div> <span class="text-red-500 font-bold pb-6">:</span>
+                        <div class="flex flex-col items-center"><span class="seconds bg-red-600 text-white px-4 py-2 rounded-xl shadow-lg font-black">00</span><span class="text-sm text-teal-300 mt-2 font-medium">ثانية</span></div>
+                    </div>
+                </div>
 
                 <div class="bg-teal-800/50 p-8 rounded-3xl max-w-3xl mx-auto border border-teal-700 shadow-inner mt-4">
                     <p class="text-xl text-white mb-6 font-medium">👇 لو حابب نساعدك في اختيار المسار الأنسب ليك، ابعتلنا دلوقتي:</p>
@@ -793,6 +811,36 @@
                             </div>
                         </div>
 
+                        <!-- FAQ 8 (NEW) -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">هل الدبلومة محتاجة لابتوب ولا عادي بالفون؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>لأ مش لازم لاب توب، حسب استخدام حضرتك، ممكن يكون الموبايل كافي جداً وممكن تحتاجي اللاب أو الكمبيوتر لو عاوزة الموضوع يكون سلس خصوصاً لو بتعملي حاجات متقدمة أو فيها تفاصيل اكتر، الفكرة إن التجربة ساعتها علي اللاب بتكون أسهل لكن ما زالت ممكنة علي الموبايل بنسبة كبيرة.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 9 (NEW) -->
+                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
+                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
+                                <span class="text-right">دايماً بيكون فيه تطورات في الذكاء الاصطناعي.. فهل المحتوى متجدد؟</span>
+                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
+                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
+                                </div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
+                                    <p>متجدد باستمرار الحمد لله! سواء على الجروب او في المحاضرات، دايماً بنبدأ بأي أخبار او تحديثات عن مواضيع اتكلمنا عنها، لحد آخر يوم في الدبلومة. وبعد الدبلومة بيكون عندنا مجتمع Smarter With AI بحيث نكمل رحلتنا اللي بدأناها مع بعض وتفضل دايماً سابق بخطوة.</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -846,6 +894,48 @@
                 }
             });
         });
+
+        // Countdown Timer Logic (24 Hours) - Robust against refresh
+        function startCountdown() {
+            let countDownDateStr = localStorage.getItem('smarterAiCountdown');
+            let countDownDate;
+            const now = new Date().getTime();
+            
+            if (!countDownDateStr) {
+                countDownDate = now + (24 * 60 * 60 * 1000);
+                localStorage.setItem('smarterAiCountdown', countDownDate);
+            } else {
+                countDownDate = parseInt(countDownDateStr);
+            }
+
+            const timerInterval = setInterval(function() {
+                const currentTime = new Date().getTime();
+                const distance = countDownDate - currentTime;
+
+                if (distance <= 0) {
+                    clearInterval(timerInterval);
+                    document.querySelectorAll(".timer-container").forEach(el => {
+                        el.innerHTML = "<span class='bg-white text-red-600 px-4 py-2 rounded-lg shadow-sm text-sm sm:text-base font-bold'>انتهى العرض! تواصل معنا لمعرفة المتاح</span>";
+                    });
+                    return;
+                }
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                const hStr = hours.toString().padStart(2, '0');
+                const mStr = minutes.toString().padStart(2, '0');
+                const sStr = seconds.toString().padStart(2, '0');
+
+                document.querySelectorAll(".hours").forEach(el => el.innerText = hStr);
+                document.querySelectorAll(".minutes").forEach(el => el.innerText = mStr);
+                document.querySelectorAll(".seconds").forEach(el => el.innerText = sStr);
+            }, 1000);
+        }
+        
+        // Initialize timer
+        startCountdown();
     </script>
 </body>
 </html>
