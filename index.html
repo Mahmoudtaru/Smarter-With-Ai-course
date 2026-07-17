@@ -1,1078 +1,668 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة Smarter With AI - طريقك لاحتراف الذكاء الاصطناعي</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --teal-dark: #0f766e;
-            --teal-light: #0d9488;
-            --accent-gold: #facc15;
-            --track-green: #22c55e;
-            --track-blue: #3b82f6;
-            --track-purple: #a855f7;
-        }
-        body {
-            font-family: 'Tajawal', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f8fafc;
-            overflow-x: hidden;
-        }
-        .hero-bg {
-            background-color: var(--teal-dark);
-            background-image:
-                linear-gradient(to bottom, rgba(13, 148, 136, 0.1) 1px, transparent 1px),
-                linear-gradient(to right, rgba(13, 148, 136, 0.1) 1px, var(--teal-dark) 1px);
-            background-size: 2rem 2rem;
-        }
-        .gradient-bg-section {
-             background-image: linear-gradient(to bottom right, var(--teal-light), var(--teal-dark));
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
-            border: 4px solid white;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-        }
-        .audience-card, .value-card, .step-card, .eco-card {
-            transition: all 0.3s ease;
-        }
-        .audience-card:hover, .value-card:hover, .step-card:hover, .eco-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
-        .track-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .track-card.featured {
-            border: 2px solid var(--track-purple);
-            transform: scale(1.05);
-            z-index: 10;
-        }
-        .gradient-bg-custom {
-            background-image: linear-gradient(to top left, #a7f3d0, #5eead4, #0d9488);
-        }
-        .testimonial-card {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-right: 4px solid var(--teal-light);
-        }
-        /* Fixed Accordion CSS */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
-        }
-        .accordion-button.active .accordion-icon {
-            transform: rotate(180deg);
-        }
-        .logo-container {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 8px;
-            display: inline-flex;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .logo-container img { height: 40px; }
-        
-        .check-list li::before {
-            content: "✔";
-            color: #22c55e;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: 0.5em;
-        }
-        .cross-list li::before {
-            content: "❌";
-            color: #ef4444;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: 0.5em;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#1e2d44" name="theme-color"/>
+<title>دبلومة Smarter With AI | من الصفر للاحتراف</title>
+<meta content="دبلومة Smarter With AI من الصفر للاحتراف: تعلّم استخدام الذكاء الاصطناعي في البحث والتعلّم والمحتوى والصور والفيديو والمواقع، بنسخة مسجلة أو دفعة لايف." name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config={theme:{extend:{colors:{brand:{navy:'#1e2d44',green:'#92b43b',greenDark:'#6f8f24',cream:'#fbf9f4',sand:'#f2eee4',ink:'#111827'}},fontFamily:{cairo:['Cairo','sans-serif']},boxShadow:{card:'0 14px 40px rgba(30,45,68,.08)',lift:'0 22px 60px rgba(30,45,68,.16)'}}}}
+  </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<style>
+    :root{--navy:#1e2d44;--green:#92b43b;--green-dark:#6f8f24;--cream:#fbf9f4;--sand:#f2eee4}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;font-family:'Cairo',sans-serif;background:var(--cream);color:var(--navy);overflow-x:hidden;font-size:16px;line-height:1.9}
+    p,li{line-height:2}
+    h1,h2,h3,h4{line-height:1.42}
+    a,button{font-family:inherit}
+    img,video,iframe{max-width:100%}
+    section{position:relative}
+    .hero-grid{background-image:linear-gradient(rgba(146,180,59,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(146,180,59,.065) 1px,transparent 1px);background-size:34px 34px}
+    .soft-dot{background-image:radial-gradient(rgba(30,45,68,.11) 1px,transparent 1px);background-size:18px 18px}
+    .glass{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(10px)}
+    .card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .card-hover:hover{transform:translateY(-5px);box-shadow:0 22px 60px rgba(30,45,68,.14);border-color:rgba(146,180,59,.65)}
+    .section-title{font-size:clamp(2rem,4vw,3.35rem);font-weight:900;line-height:1.45}
+    .section-copy{font-size:1.08rem;color:#5b6473;line-height:2;max-width:820px}
+    .hero-title{font-size:clamp(2.45rem,5.4vw,4.6rem);font-weight:900;line-height:1.42;letter-spacing:-.02em}
+    .eyebrow{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;padding:.62rem 1rem;font-weight:800;font-size:.88rem}
+    .benefit-card,.audience-card,.included-card{border:1px solid rgba(30,45,68,.1);border-radius:1.55rem;background:#fff;padding:1.65rem}
+    .benefit-card p,.audience-card p,.included-card p{color:#657080;line-height:1.95}
+    .icon-box{width:3.15rem;height:3.15rem;border-radius:1rem;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem}
+    .week-item{background:#fff;border:1px solid rgba(30,45,68,.1);border-radius:1.55rem;overflow:hidden;box-shadow:0 12px 34px rgba(30,45,68,.055)}
+    .week-button{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:1.1rem;padding:1.4rem 1.55rem;text-align:right;background:transparent;border:0;cursor:pointer;color:inherit}
+    .week-title-wrap{display:flex;align-items:flex-start;gap:1rem;min-width:0}
+    .week-number{width:3rem;height:3rem;flex:0 0 3rem;border-radius:1rem;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .week-button small{color:var(--green-dark);font-weight:900}
+    .week-button h3{font-size:1.3rem;font-weight:900;margin:.18rem 0 .35rem}
+    .week-button p{color:#697386;margin:0;line-height:1.85}
+    .week-answer,.faq-answer{max-height:0;overflow:hidden;transition:max-height .38s ease}
+    .week-button.active .chev,.faq-button.active .chev{transform:rotate(180deg)}
+    .chev{transition:transform .25s ease;margin-top:.75rem;flex:0 0 auto}
+    .week-body{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:0 1.55rem 1.55rem}
+    .week-learn,.week-result{border-radius:1.2rem;padding:1.3rem}
+    .week-learn{background:var(--cream)}
+    .week-result{background:rgba(146,180,59,.14);border:1px solid rgba(146,180,59,.32)}
+    .week-body h4{font-weight:900;font-size:1.05rem;margin:0 0 .8rem}
+    .week-learn ul{display:grid;gap:.45rem;margin:0;padding:0;list-style:none}
+    .week-learn li{display:flex;gap:.65rem;color:#5f6978}
+    .week-learn li i{color:var(--green-dark);margin-top:.62rem;font-size:.72rem}
+    .week-result p{font-weight:700;line-height:2;margin:0}
+    .app-shell{border-radius:2.2rem;background:#fff;border:1px solid rgba(30,45,68,.12);box-shadow:0 28px 70px rgba(30,45,68,.14);padding:1.25rem}
+    .app-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+    .app-tile{border-radius:1.25rem;background:var(--sand);padding:1.15rem;min-height:128px}
+    .app-tile p{font-size:.88rem;color:#6b7280;line-height:1.75;margin:.25rem 0 0}
+    .review-card{background:#fff;border:1px solid rgba(30,45,68,.1);border-radius:1.55rem;padding:1.55rem;box-shadow:0 12px 34px rgba(30,45,68,.055);break-inside:avoid}
+    .review-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.9rem}
+    .quote-icon{width:2.5rem;height:2.5rem;border-radius:.8rem;background:rgba(146,180,59,.15);color:var(--green-dark);display:flex;align-items:center;justify-content:center}
+    .stars{display:flex;gap:.15rem;color:#f5b301;font-size:.78rem}
+    .review-card h3{font-size:1.18rem;font-weight:900;margin:0 0 .75rem}
+    .review-copy{display:grid;gap:.75rem;color:#5e6877}
+    .review-copy p{margin:0;line-height:2}
+    .review-link{display:inline-flex;align-items:center;gap:.55rem;margin-top:1rem;color:#2563eb;font-weight:800}
+    .review-extra.hidden{display:none}
+    .faq-item{background:#fff;border:1px solid rgba(30,45,68,.1);border-radius:1.25rem;overflow:hidden}
+    .faq-button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.35rem;border:0;background:transparent;color:inherit;text-align:right;font-size:1.04rem;font-weight:900;cursor:pointer}
+    .faq-answer p{padding:0 1.35rem 1.3rem;margin:0;color:#5e6877;line-height:2}
+    .mobile-cta{padding-bottom:env(safe-area-inset-bottom)}
+    .desktop-nav{display:flex}
+    @media(max-width:1023px){.desktop-nav{display:none}}
+    @media(max-width:767px){
+      body{font-size:15px;padding-bottom:82px}
+      .hero-title{font-size:2.3rem;line-height:1.52}
+      .section-title{font-size:2rem;line-height:1.5}
+      .section-copy{font-size:1rem;line-height:2}
+      .week-body{grid-template-columns:1fr}
+      .week-button{padding:1.15rem}
+      .week-body{padding:0 1.15rem 1.15rem}
+      .week-number{width:2.65rem;height:2.65rem;flex-basis:2.65rem}
+      .week-button h3{font-size:1.1rem;line-height:1.55}
+      .week-button p{font-size:.92rem;line-height:1.9}
+      .app-shell{border-radius:1.6rem;padding:.85rem}
+      .app-grid{gap:.65rem}
+      .app-tile{min-height:115px;padding:.95rem}
+      .review-card{padding:1.25rem}
+    }
+    @media(max-width:420px){.app-grid{grid-template-columns:1fr}.app-tile.featured{grid-column:auto}}
+  
+    /* Final readability and framing refinements */
+    body{line-height:2.05}
+    p,li{line-height:2.05}
+    .section-frame{background:#fff;border:2px solid rgba(30,45,68,.10);border-radius:2.25rem;padding:clamp(1.25rem,3vw,2.75rem);box-shadow:0 16px 46px rgba(30,45,68,.07)}
+    .benefit-card,.audience-card,.included-card{border-width:2px;box-shadow:0 10px 28px rgba(30,45,68,.055)}
+    .level-card{position:relative;background:var(--cream);border:2px solid rgba(30,45,68,.10);border-radius:1.6rem;padding:1.7rem;padding-top:2.2rem}
+    .level-card.featured-level{border-color:rgba(146,180,59,.75);background:rgba(146,180,59,.10)}
+    .level-number{position:absolute;top:-1rem;right:1.4rem;width:2.35rem;height:2.35rem;border-radius:.8rem;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}
+    .level-card h3{font-size:1.25rem;font-weight:900;margin:0 0 .65rem}
+    .level-card p{margin:0;color:#626d7c}
+    .audience-note{display:flex;align-items:flex-start;gap:.9rem;background:var(--navy);color:#fff;border-radius:1.35rem;padding:1.25rem 1.4rem;border:2px solid rgba(146,180,59,.45)}
+    .audience-note i{color:var(--green);margin-top:.55rem}
+    .week-item{border:2px solid rgba(30,45,68,.12);box-shadow:0 14px 36px rgba(30,45,68,.065)}
+    .week-button{padding:1.55rem 1.7rem}
+    .week-button.active{background:rgba(146,180,59,.07);border-bottom:1px solid rgba(30,45,68,.08)}
+    .week-body-v2{display:grid;grid-template-columns:1fr 1.35fr;gap:1rem;padding:1.25rem 1.55rem 1.55rem}
+    .week-goal,.week-topics,.week-outcome{border:2px solid rgba(30,45,68,.09);border-radius:1.25rem;padding:1.3rem;background:#fff}
+    .week-goal{background:rgba(146,180,59,.12);border-color:rgba(146,180,59,.35)}
+    .week-topics{grid-row:span 2}
+    .week-outcome{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .week-label{display:flex;align-items:center;gap:.6rem;font-size:.92rem;font-weight:900;margin-bottom:.65rem;color:var(--green-dark)}
+    .week-outcome .week-label{color:var(--green)}
+    .week-goal p,.week-outcome p{margin:0;font-weight:700}
+    .week-topics ul{display:grid;gap:.45rem;margin:0;padding:0;list-style:none}
+    .week-topics li{display:flex;gap:.7rem;color:#5c6675}
+    .week-topics li i{color:var(--green-dark);font-size:.72rem;margin-top:.68rem}
+    .bio-copy p{margin:0}
+    .bio-quote{background:rgba(146,180,59,.13);border:2px solid rgba(146,180,59,.36);border-right:6px solid var(--green);border-radius:1.25rem;padding:1.25rem 1.35rem;color:var(--navy);line-height:2.05}
+    .investment-note{max-width:860px;margin:0 auto 1.8rem;display:flex;align-items:flex-start;gap:1rem;text-align:right;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.16);border-right:6px solid var(--green);border-radius:1.35rem;padding:1.15rem 1.25rem}
+    .investment-note i{width:2.6rem;height:2.6rem;border-radius:.85rem;background:var(--green);color:var(--navy);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:1.15rem}
+    .investment-note strong{display:block;color:#fff;font-size:1.08rem;margin-bottom:.25rem}
+    .investment-note p{margin:0;color:#cbd5e1;line-height:1.95}
+    .plan-card{position:relative;border:2px solid rgba(255,255,255,.15);border-radius:2rem;padding:clamp(1.6rem,3vw,2.3rem);box-shadow:0 18px 48px rgba(0,0,0,.13)}
+    .plan-card.live-plan{border-color:rgba(255,255,255,.62);padding-top:3rem}
+    .plan-badge{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);white-space:nowrap;background:#fff;color:var(--navy);border:2px solid rgba(30,45,68,.1);padding:.55rem 1.05rem;border-radius:999px;font-weight:900;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+    .plan-details{border:2px solid rgba(30,45,68,.10);border-radius:1.25rem;padding:1.2rem;background:var(--cream);margin-bottom:1rem}
+    .live-details{background:rgba(255,255,255,.25);border-color:rgba(30,45,68,.16)}
+    .plan-details h4{font-weight:900;font-size:1.05rem;margin:0 0 .75rem}
+    .plan-details ul{display:grid;gap:.55rem;margin:0;padding:0;list-style:none}
+    .plan-details li{display:flex;align-items:flex-start;gap:.7rem}
+    .plan-details li i{color:var(--green-dark);margin-top:.68rem;font-size:.75rem}
+    .live-details li i{color:var(--navy)}
+    .plan-link{display:flex;align-items:center;justify-content:center;gap:.65rem;width:100%;border:2px solid var(--navy);color:var(--navy);padding:.9rem 1rem;border-radius:1rem;font-weight:900}
+    .plan-link.dark-link{background:var(--navy);color:#fff}
+    .contact-after-details{margin-top:2rem;border:2px solid rgba(255,255,255,.18);border-radius:1.5rem;background:rgba(255,255,255,.07);padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+    .contact-after-details p{margin:.2rem 0 0;color:#cbd5e1}
+    .contact-after-details a{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;background:var(--green);color:var(--navy);padding:1rem 1.25rem;border-radius:1rem;font-weight:900;flex:0 0 auto}
+    .price-box{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;border:2px solid rgba(30,45,68,.10);border-radius:1.25rem;padding:1.05rem 1.15rem;margin:0 0 1.15rem;background:#fff}
+    .live-plan .price-box{background:rgba(255,255,255,.72);border-color:rgba(30,45,68,.16)}
+    .price-label{font-size:.86rem;font-weight:900;opacity:.72;margin-bottom:.15rem}
+    .price-current{font-size:2.6rem;line-height:1;font-weight:950;letter-spacing:-.04em}
+    .price-current small{font-size:.95rem;font-weight:900;letter-spacing:0}
+    .price-old{text-decoration:line-through;text-decoration-thickness:2px;opacity:.55;font-weight:900}
+    .saving-pill{display:inline-flex;align-items:center;gap:.35rem;background:rgba(146,180,59,.16);color:var(--green-dark);border:1px solid rgba(146,180,59,.38);padding:.4rem .65rem;border-radius:999px;font-size:.82rem;font-weight:900;margin-top:.45rem}
+    .gift-highlight{border:2px solid rgba(30,45,68,.18);border-radius:1.35rem;background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.35));padding:1.25rem;margin:1rem 0}
+    .gift-highlight h4{display:flex;align-items:center;gap:.6rem;font-size:1.1rem;font-weight:950;margin:0 0 .55rem}
+    .gift-highlight p{margin:0 0 .8rem;font-weight:750;line-height:1.9}
+    .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+    .gift-item{display:flex;gap:.55rem;align-items:flex-start;background:rgba(255,255,255,.62);border:1px solid rgba(30,45,68,.11);border-radius:.9rem;padding:.75rem;font-weight:800;font-size:.92rem}
+    .gift-item i{color:var(--green-dark);margin-top:.35rem}
+    .payment-box{margin-top:2rem;background:#fff;color:var(--navy);border:3px solid var(--green);border-radius:1.6rem;padding:1.35rem 1.5rem;box-shadow:0 16px 42px rgba(0,0,0,.13)}
+    .payment-box h3{font-size:1.35rem;font-weight:950;margin:0 0 .5rem}
+    .payment-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .payment-actions a{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;flex:1 1 230px;background:var(--navy);color:#fff;border:2px solid var(--navy);border-radius:1rem;padding:.95rem 1.1rem;font-weight:950;transition:.2s ease}
+    .payment-actions a:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(30,45,68,.15)}
+    .payment-actions .secondary-payment-link{background:#fff;color:var(--navy)}
+    .gift-final-line{display:flex;align-items:flex-start;gap:.55rem;margin-top:1rem!important;padding:.85rem 1rem;border-radius:1rem;background:var(--navy);color:#fff;font-weight:950!important;line-height:1.8!important}
+    .gift-final-line i{color:var(--green);margin-top:.25rem}
+    .payment-methods{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1rem}
+    .payment-method{border:2px solid rgba(30,45,68,.10);border-radius:1rem;padding:1rem;background:var(--cream)}
+    .payment-method strong{display:block;font-size:1.05rem;margin-bottom:.2rem}
+    .payment-number{direction:ltr;display:inline-block;font-size:1.25rem;font-weight:950;letter-spacing:.04em}
+    .payment-note{margin:.9rem 0 0;color:#5b6674;font-weight:700}
+    .faq-item{border:2px solid rgba(30,45,68,.14);border-radius:1.35rem;box-shadow:0 10px 28px rgba(30,45,68,.055);background:#fff}
+    .faq-button{padding:1.35rem 1.45rem}
+    .faq-button.active{background:rgba(146,180,59,.08)}
+    .faq-answer-inner{border-top:2px solid rgba(30,45,68,.09);background:var(--cream);padding:1.2rem 1.45rem 1.35rem}
+    .faq-answer-inner p{padding:0;margin:0;color:#566170}
+    .faq-answer-inner p+p{margin-top:.8rem}
+    @media(max-width:767px){
+      body{line-height:1.95}
+      p,li{line-height:1.95}
+      .section-frame{border-radius:1.55rem;padding:1rem}
+      .week-body-v2{grid-template-columns:1fr;padding:1rem}
+      .week-topics{grid-row:auto}
+      .week-button{padding:1.15rem}
+      .contact-after-details{flex-direction:column;align-items:stretch;text-align:center}
+      .contact-after-details a{width:100%}
+      .plan-card{border-radius:1.55rem;padding:1.35rem}
+      .plan-card.live-plan{padding-top:2.7rem;margin-top:1rem}
+      .price-box{align-items:flex-start;flex-direction:column}
+      .gift-grid,.payment-methods{grid-template-columns:1fr}
+      .payment-actions{flex-direction:column}
+      .payment-actions a{width:100%}
+      .price-current{font-size:2.25rem}
+      .faq-button{padding:1.1rem;font-size:1rem}
+      .faq-answer-inner{padding:1rem 1.1rem 1.15rem}
+    }
+</style>
 </head>
-<body class="text-slate-800">
-
-    <!-- Top Promo Banner (No Timer) -->
-    <div id="promo-banner" class="bg-red-600 text-white py-3 px-4 text-center z-[60] relative font-bold text-sm sm:text-base border-b border-red-700 shadow-md">
-        <p>🔥 عرض لا يفوت! استمتع بخصم 30% على جميع خدماتنا (الاستشارات الشخصية والدبلومة) لفترة محدودة 🚀</p>
-    </div>
-
-    <!-- Header -->
-    <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 bg-teal-800/95 backdrop-blur-md shadow-lg">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="logo-container">
-                <img src="https://i.postimg.cc/kg2KBzzN/Untitled-design.png" alt="Smarter With AI Logo">
-            </a>
-            <div class="hidden lg:flex items-center space-x-6 space-x-reverse text-white font-medium">
-                <a href="#services" class="hover:text-yellow-300 transition-colors text-yellow-300 font-bold">خدماتنا</a>
-                <a href="#about-course" class="hover:text-yellow-300 transition-colors">ليه إحنا؟</a>
-                <a href="#syllabus" class="hover:text-yellow-300 transition-colors">المنهج</a>
-                <a href="#instructor" class="hover:text-yellow-300 transition-colors">المحاضر</a>
-                <a href="#testimonials" class="hover:text-yellow-300 transition-colors">الآراء</a>
-                <a href="#faq" class="hover:text-yellow-300 transition-colors">الأسئلة الشائعة</a>
-                <a href="#services" class="bg-yellow-400 text-teal-900 font-bold py-2 px-6 rounded-full hover:scale-105 transition-transform shadow-md">ابدأ الآن</a>
-            </div>
-             <div class="lg:hidden">
-                <a href="#services" class="bg-yellow-400 text-teal-900 font-bold py-2 px-4 rounded-full text-sm shadow-md">
-                    اكتشف خدماتنا
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- 1. Hero Section + Video -->
-    <section class="hero-bg text-white pt-16 pb-32 overflow-hidden relative">
-        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-            
-            <!-- Badge -->
-            <span class="bg-white/10 border border-white/20 text-yellow-300 text-sm md:text-base font-bold px-5 py-2 rounded-full mb-8 inline-block tracking-wide shadow-sm">
-                💡 بوابتك الموثوقة لعالم الذكاء الاصطناعي
-            </span>
-            
-            <!-- Main Titles -->
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight mb-4 drop-shadow-lg">
-                منصة Smarter With AI
-            </h1>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl text-teal-100 font-extrabold mb-10 drop-shadow-md">
-                خلي الذكاء الاصطناعي شريك نجاحك.. <span class="text-yellow-300">من الصفر للاحتراف!</span>
-            </h2>
-            
-            <!-- Text Content Box -->
-            <div class="max-w-4xl mx-auto bg-black/20 p-8 sm:p-10 rounded-3xl border border-white/10 backdrop-blur-sm mb-12 shadow-2xl">
-                
-                <p class="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-bold mb-8">
-                    أهلاً بيك في <span class="text-yellow-300">Smarter With Ai</span>!<br>
-                    <span class="text-slate-200 font-medium text-lg sm:text-xl block mt-3 leading-relaxed">
-                        إحنا هنا عشان نساعدك توظف الذكاء الاصطناعي في مجالك بطريقة عملية.<br>
-                        سواء كنت بتدور على حل سريع لمشكلة، أو عايز تتعلم المجال من الصفر.
-                    </span>
-                </p>
-                
-                <div class="border-t border-white/10 pt-8 mt-2 text-base sm:text-lg md:text-xl text-slate-300 font-medium space-y-3">
-                    <p>لو حاسس إنك تايه وسط أدوات كتير…</p>
-                    <p>أو كل يوم تسمع عن تحديث جديد ومش عارف تبدأ منين…</p>
-                    <p>أو بتحاول تستخدم AI لكن النتائج عشوائية…</p>
-                    <div class="pt-4">
-                        <span class="inline-block bg-teal-600/80 text-white font-extrabold px-8 py-3 rounded-2xl text-xl shadow-lg border border-teal-500">
-                            أنت في المكان الصح 💚
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Button -->
-            <div class="mb-16">
-                <a href="#services" class="inline-flex items-center justify-center gap-3 bg-yellow-400 text-teal-950 font-black text-xl md:text-2xl py-5 px-10 md:px-14 rounded-full hover:bg-yellow-300 transition-all duration-300 shadow-[0_0_30px_rgba(250,204,21,0.5)] transform hover:scale-105 hover:-translate-y-1">
-                    <span>استكشف خدماتنا واختار اللي يناسبك</span>
-                    <i class="fas fa-arrow-down mt-1"></i>
-                </a>
-            </div>
-            
-            <!-- Promotional Video -->
-            <div class="max-w-5xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
-                <div class="video-container shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                    <iframe src="https://www.youtube.com/embed/RqHk7ogCqrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. The Truth / Reality Check Section (WHITE BG) -->
-    <section class="py-20 bg-white -mt-10 relative z-10 rounded-t-[3rem]">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">👇 خليني أقولك الحقيقة…</h2>
-                <p class="text-xl text-slate-600 mt-4 font-bold">الذكاء الاصطناعي مش مجرد أداة. هو ميزة تنافسية.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- The Problem -->
-                <div class="bg-red-50 p-8 rounded-3xl border border-red-100 shadow-sm" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold text-red-600 mb-6 border-b border-red-200 pb-4">أغلب الناس دلوقتي:</h3>
-                    <ul class="cross-list space-y-4 text-slate-700 font-medium text-lg">
-                        <li>بتجرب أدوات بدون نظام</li>
-                        <li>بتنسخ برومبتات جاهزة وتتوقع سحر</li>
-                        <li>بتضيع وقت في التجربة أكتر ما بتوفره</li>
-                        <li>وبتفضل تايهة ومشتتة وسط التحديثات اليومية</li>
-                    </ul>
-                    <p class="mt-6 font-bold text-slate-800 text-lg bg-red-100 p-3 rounded-lg text-center">والنتيجة؟ مجهود كتير… تقدم قليل.</p>
-                </div>
-                
-                <!-- The Solution -->
-                <div class="bg-green-50 p-8 rounded-3xl border border-green-100 shadow-md transform md:-translate-y-4" data-aos="fade-right">
-                    <h3 class="text-2xl font-bold text-green-700 mb-6 border-b border-green-200 pb-4">💡 مع Smarter With AI:</h3>
-                    <ul class="check-list space-y-4 text-slate-700 font-medium text-lg">
-                        <li>هتبني مساعد شخصي يفكر بطريقتك</li>
-                        <li>هتوفر 3–5 ساعات يوميًا من شغلك</li>
-                        <li>هتنجز أبحاثك ومشاريعك أسرع بكتير وبجودة أعلى</li>
-                        <li>هتعرف تربط الأدوات ببعض وتبني Workflow حقيقي</li>
-                        <li>هتستخدم AI في أي مجال تدخله بثقة كاملة</li>
-                    </ul>
-                    <p class="mt-6 font-bold text-white text-lg bg-teal-600 p-3 rounded-lg text-center shadow-inner">
-                        إحنا مش بنعلمك تستخدم أداة.. إحنا بنساعدك تبني عقلية تستخدم الـ AI بذكاء.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <main>
-
-        <!-- 3. Target Audience Section (SLATE-50 BG) -->
-        <section id="target-audience" class="py-24 bg-slate-50 border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">
-                        أياً كان تخصصك، الـ AI هيزود إنتاجيتك وجودة شغلك أضعاف! 🎯
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Card 1 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-teal-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-20 h-20 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800">الطلبة والباحثين</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">لخص مئات الصفحات، اعمل كويزات لنفسك، احصل على مصادر دقيقة، وافهم المعقد بسهولة تامة.</p>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-blue-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800">صناع المحتوى</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">اكتب محتوى وسكريبتات أسرع بنظام متكامل، حول محتواك لبودكاست، اعمل فيديوهات احترافية، وزود تفاعل جمهورك.</p>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-purple-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-20 h-20 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800">المسوقين والمستقلين</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">اعمل عروض احترافية، صمم صور ولوجوهات، أنتج فيديوهات إعلانية، وسلم شغل ينافس وكالات كبيرة.</p>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="audience-card p-8 rounded-3xl bg-white border-2 border-amber-500 text-center shadow-md" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-inner">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800">أصحاب المشاريع</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">ابني موقعك بنفسك، طور تطبيقك، وفر آلاف الجنيهات، وابني نظام أتمتة داخلي يسهل إدارة شغلك.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Services & Pricing Section (CORE OFFERINGS) -->
-        <section id="services" class="py-24 gradient-bg-section relative">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">إزاي نقدر نساعدك؟ (خدماتنا) 🎯</h2>
-                    <p class="text-teal-100 text-lg md:text-xl max-w-2xl mx-auto font-bold mb-8">عشان نسهل عليك، وفرنا خدماتنا في أشكال مختلفة تناسب احتياجك ووقتك:</p>
-                    
-                    <!-- Referral Banner -->
-                    <div class="bg-yellow-100 border-2 border-yellow-400 text-yellow-800 px-6 py-4 rounded-full font-bold shadow-lg text-lg md:text-xl inline-block transition-transform hover:scale-105 cursor-default">
-                        🎁 خصم خاص مميز لأي حد من طرف خريجين Smarter With Ai على أي خدمة!
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch text-right">
-                    
-                    <!-- 1. Consultations -->
-                    <div class="track-card p-8 md:p-10 rounded-[2rem] bg-white border-t-8 border-blue-500 flex flex-col h-full shadow-xl" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-blue-800 bg-blue-100 px-4 py-1.5 rounded-full font-bold text-sm">الحل المخصص ليك</span>
-                            <i class="fas fa-comments text-blue-500 text-4xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-black text-slate-800 mb-8 text-center">الاستشارات الشخصية</h3>
-                        
-                        <div class="flex-grow mb-8">
-                            <ul class="space-y-4 text-slate-700 text-[15px] font-bold">
-                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 ml-2 text-xl"></i><span>بتبعتلنا <strong class="text-blue-700">بريف عنك</strong> ومحتاج الذكاء الاصطناعي يساعدك في إيه (شغلك، دراستك، حياتك).</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 ml-2 text-xl"></i><span>بنظبط مع بعض <strong class="text-blue-700">سيشن (Live)</strong> تناسبك ومخصصة لاحتياجاتك.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-1 ml-2 text-xl"></i><span>السيشن بتكون <strong class="text-blue-700">مسجلة</strong> وبتتبعتلك بالشرح بتاعها عشان ترجعلها تاني.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-amber-500 mt-1 ml-2 text-xl"></i><span class="text-amber-600">سعرها بيتحدد بالساعة.</span></li>
-                            </ul>
-                        </div>
-                        
-                        <a href="https://wa.me/201007964766?text=السلام%20عليكم،%20مهتم%20بتفاصيل%20الاستشارات%20الشخصية" target="_blank" class="w-full mt-auto py-4 bg-slate-800 text-white rounded-xl font-bold text-center hover:bg-slate-700 transition-all text-lg shadow-md">احجز استشارتك</a>
-                    </div>
-
-                    <!-- 2. Recorded Diploma -->
-                    <div class="track-card p-8 md:p-10 rounded-[2rem] bg-white border-t-8 border-teal-500 flex flex-col h-full shadow-xl" data-aos="fade-up" data-aos-delay="200">
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="text-teal-800 bg-teal-100 px-4 py-1.5 rounded-full font-bold text-sm">المرونة والتوفير</span>
-                            <i class="fas fa-play-circle text-teal-500 text-4xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-black text-slate-800 mb-8 text-center">دبلومة Smarter With Ai (مسجلة)</h3>
-                        
-                        <div class="flex-grow mb-8">
-                            <ul class="space-y-4 text-slate-700 text-[15px] font-bold">
-                                <li class="flex items-start"><i class="fas fa-check-circle text-teal-500 mt-1 ml-2 text-xl"></i><span>أول ما تشترك بيبقي معاك <strong class="text-teal-700">المحتوى كامل فوراً</strong> (فيديوهات مركزة).</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-teal-500 mt-1 ml-2 text-xl"></i><span>مع أي تحديث أو أدوات جديدة <strong class="text-teal-700">بنسجل شرح جديد وبنضيفه مجاناً</strong> في الجروب.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-teal-500 mt-1 ml-2 text-xl"></i><span>الوصول الكامل لـ <strong class="text-teal-700">"تطبيق الكورس"</strong> ومجتمع التليجرام.</span></li>
-                                <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-2 text-xl"></i><span class="text-green-600">الميزة: سعر أقل وموفر جداً.</span></li>
-                            </ul>
-                        </div>
-                        
-                        <a href="https://wa.me/201007964766?text=السلام%20عليكم،%20مهتم%20بالنسخة%20المسجلة%20من%20الدبلومة" target="_blank" class="w-full mt-auto py-4 bg-slate-800 text-white rounded-xl font-bold text-center hover:bg-slate-700 transition-all text-lg shadow-md">احجز النسخة المسجلة</a>
-                    </div>
-
-                    <!-- 3. Live Diploma (VIP) -->
-                    <div class="track-card featured p-8 md:p-10 rounded-[2rem] bg-gradient-to-b from-purple-50 to-white border-t-8 border-purple-600 flex flex-col h-full relative shadow-2xl" data-aos="fade-up" data-aos-delay="300">
-                        <div class="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 px-8 rounded-full font-black text-sm shadow-lg border-2 border-white whitespace-nowrap">
-                            الأكثر طلباً (VIP) 🌟
-                        </div>
-                        
-                        <div class="flex items-center justify-between mb-6 mt-2">
-                            <span class="text-purple-800 bg-purple-200 px-4 py-1.5 rounded-full font-bold text-sm">التجربة الكاملة</span>
-                            <i class="fas fa-video text-purple-600 text-4xl"></i>
-                        </div>
-                        <h3 class="text-3xl font-black text-purple-900 mb-8 text-center">دبلومة Smarter With Ai (لايف)</h3>
-                        
-                        <div class="flex-grow mb-6">
-                            <ul class="space-y-4 text-slate-800 font-bold text-[15px]">
-                                <li class="flex items-start"><i class="fas fa-layer-group text-purple-500 mt-1 ml-2 text-xl"></i><span>رحلة تفاعلية <strong class="text-purple-700">مدتها شهرين أو أكتر</strong>.</span></li>
-                                <li class="flex items-start"><i class="fas fa-satellite-dish text-purple-600 mt-1 ml-2 text-xl"></i><span>شرح وتطبيق لايف أسبوعي، <strong class="text-purple-700">تسأل وتبعت تاسكاتك</strong>.</span></li>
-                                <li class="flex items-start"><i class="fas fa-users text-purple-600 mt-1 ml-2 text-xl"></i><span>كل مميزات المسجلة + <strong class="text-purple-700">جروب واتساب خاص</strong> للدفعة.</span></li>
-                                <li class="flex items-start"><i class="fas fa-gift text-pink-500 mt-1 ml-2 text-xl"></i><span class="text-pink-600">هدايا (حسابات Pro مدفوعة) لتجربة الأدوات! 🎁</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="bg-gradient-to-br from-purple-600 to-purple-700 text-white p-5 rounded-2xl mt-auto shadow-inner text-center mb-6">
-                            <span class="font-black text-xl text-yellow-300 block mb-1">💳 متاح نظام التقسيط</span>
-                            <p class="text-sm opacity-95">متوفر فقط للنسخة اللايف</p>
-                        </div>
-                        <a href="https://wa.me/201007964766?text=السلام%20عليكم،%20مهتم%20بالنسخة%20اللايف%20من%20الدبلومة" target="_blank" class="w-full mt-auto py-5 bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-xl font-black text-center hover:shadow-lg transition-all text-xl shadow-purple-500/30">التحق بالدفعة اللايف 🚀</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Value Proposition Section (WHITE BG) -->
-        <section id="about-course" class="py-24 bg-white border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-7xl">
-                
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 leading-tight mb-6">
-                        ليه تبدأ رحلتك مع Smarter With AI؟
-                    </h2>
-                    
-                    <div class="max-w-4xl mx-auto bg-teal-50 border border-teal-100 p-6 md:p-8 rounded-3xl shadow-sm text-lg md:text-xl text-teal-900 font-medium leading-relaxed">
-                        <p>إحنا عارفين إن عالم الذكاء الاصطناعي ممكن يبان كبير ومشتت في البداية.</p>
-                        <p>أدوات كتير، فيديوهات كتير، Prompts كتير، وكل يوم حاجة جديدة.</p>
-                        <div class="mt-4 pt-4 border-t border-teal-200/60">
-                            <span class="font-black text-teal-700 text-xl md:text-2xl">عشان كده دبلومة Smarter With AI معمولة عشان تاخدك خطوة بخطوة من مرحلة <span class="text-red-500">“مش عارف أبدأ منين”</span> لمرحلة إنك تستخدم الـ AI بثقة في شغلك، دراستك، محتواك، ومهامك اليومية.</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Point 1 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-comment-dots"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">هتعرف تطلب من AI اللي محتاجه بوضوح</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">مش هتفضل تكتب سؤال عام وتستغرب من الإجابة العامة. هتتعلم إزاي تشرح فكرتك، هدفك، وجمهورك بطريقة تخلي أدوات الذكاء الاصطناعي تفهمك وتطلعلك نتيجة أقرب للي في دماغك.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Point 2 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-clock"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">هتوفر وقتك في المهام المتكررة</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">بدل ما تقضي وقت طويل في البحث، التلخيص، كتابة المحتوى، أو ترتيب الأفكار… هتتعلم تستخدم الـ AI كأداة تساعدك تخلص المهام دي أسرع، وبشكل منظم، ومن غير ما تفقد لمستك أنت.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Point 3 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-bullseye"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">تستخدم الأدوات الصح من غير تشتت</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">مش محتاج تعرف 100 أداة عشان تبقى شاطر. إحنا هنساعدك تفهم تستخدم إيه، إمتى، وليه… حسب احتياجك الحقيقي، سواء في الدراسة، الشغل، المحتوى، التصميم، أو العروض.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Point 4 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-laptop-code"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">هتطبق عملي بعد كل محاضرة</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">الدبلومة مش مشاهدة وخلاص. بعد كل محاضرة في تاسك عملي يخليك تطبق بنفسك، وتجرب، وتغلط، وتطلع بنتيجة حقيقية بإيدك. وده اللي بيخلي التعلم يتحول لمهارة فعلية.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Point 5 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up" data-aos-delay="400">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-gift"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">هتاخد هدايا واشتراكات مدفوعة</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">علشان نشجعك على التطبيق، كل تاسك بتسلمه بيزود نقاطك. والنقاط دي ممكن تتحول لهدايا واشتراكات مدفوعة تساعدك تكمل تطبيق، زي Canva و Google AI Pro وغيرها.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Point 6 -->
-                    <div class="value-card p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-500" data-aos="fade-up" data-aos-delay="500">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md shrink-0"><i class="fas fa-users"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">هتفضل متابع الجديد بعد الدبلومة</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">رحلتك مش بتنتهي بانتهاء المحاضرات. هتفضل جزء من مجتمع Smarter With AI، نشارك فيه تحديثات، أدوات، أفكار، وتجارب عملية تساعدك تفضل مواكب للتطور السريع.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conclusion Banner -->
-                <div class="mt-16 bg-slate-800 p-8 md:p-10 rounded-3xl text-center shadow-2xl relative overflow-hidden" data-aos="zoom-in">
-                    <div class="absolute inset-0 bg-teal-900/20"></div>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl md:text-3xl font-black mb-4 text-yellow-400"><i class="fas fa-lightbulb mr-2"></i> الخلاصة</h3>
-                        <p class="text-xl md:text-2xl text-white leading-relaxed font-bold max-w-4xl mx-auto">
-                            إحنا مش بنعلمك تحفظ أدوات.<br>
-                            <span class="text-teal-200 mt-2 block font-medium">إحنا بنساعدك تستخدم الذكاء الاصطناعي بطريقة عملية تخليك تشتغل أذكى، تتعلم أسرع، وتوفر وقتك في الحاجات اللي بتعملها كل يوم.</span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 6. Syllabus Stages Section (SLATE-50 BG) -->
-        <section id="syllabus" class="py-24 bg-slate-50 border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-teal-700 bg-teal-100 border border-teal-200 px-5 py-2 rounded-full font-bold text-sm mb-4 inline-block shadow-sm">محتوى الدبلومة الشاملة</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">خريطة الدبلومة – 6 مراحل من الصفر للاحتراف 🗺️</h2>
-                </div>
-                
-                <!-- Timeline container with overflow control to prevent line bleeding -->
-                <div class="relative overflow-hidden py-4">
-                    <!-- The connecting line constrained within this div -->
-                    <div class="absolute top-0 bottom-0 left-[2.25rem] md:left-1/2 w-1 bg-gradient-to-b from-teal-500 to-teal-900 opacity-30 transform md:-translate-x-1/2 z-0"></div>
-                    
-                    <div class="space-y-8 relative z-10">
-                        
-                        <!-- Step 1 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-500 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">1</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-teal-500 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-teal-700">الأساسيات والبحث العميق</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>التعرف على أنواع الذكاء الاصطناعي</li>
-                                    <li>مهارات البحث العميق (Deep Research)</li>
-                                    <li>استخدام AI كمحرك إجابات موثق بالمصادر</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Step 2 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="100">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-500 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">2</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-blue-500 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-blue-700">التعلم الفائق (Super Learning)</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>تسأل الذكاء الاصطناعي ويرد عليك من مصادرك الموثوقة</li>
-                                    <li>يشرحلك المعقد بشكل تفاعلي كإنه مدرس خصوصي</li>
-                                    <li>عمل اختبارات وفلاش كارد للمراجعة وتثبيت المعلومات</li>
-                                    <li>تصميم عروض تقديمية (Presentations) وإنفوجرافيك بسهولة</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Step 3 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="200">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">3</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-purple-500 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-purple-700">السحر البصري والصوتي</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>إنشاء صور احترافية وتصميمات سوشيال ميديا</li>
-                                    <li>عمل فيديوهات وإعلانات مبهرة</li>
-                                    <li>عمل أڤاتار خاص بيك مع مزامنة مثالية للصوت</li>
-                                    <li>عمل فويس أوفر احترافي واستنساخ صوتك بجودة ودقة عالية</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Step 4 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="300">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-500 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">4</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-amber-500 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-amber-700">كتابة المحتوى وأنظمة العمل (Workflows)</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>احتراف كتابة المحتوى وتوليد الأفكار الإبداعية</li>
-                                    <li>مشاركة الـ Workflow الشخصي بتاعي ككاتب محتوى</li>
-                                    <li>تسليمك المساعدين (GPTs) اللي بستخدمهم بشكل يومي في شغلي</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Step 5 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="400">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-rose-500 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">5</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-rose-500 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-rose-600">البرمجة بدون كود (Vibe Coding)</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>بناء موقع كامل بدون كتابة سطر كود واحد</li>
-                                    <li>تحويل الـ CV بتاعك لموقع إلكتروني</li>
-                                    <li>إنشاء تطبيقات تفاعلية بخطوات بسيطة</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Step 6 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="500">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-teal-800 text-white font-bold shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ml-4 md:ml-0 z-20">6</div>
-                            <div class="step-card w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-2xl bg-white border-2 border-teal-800 shadow-md">
-                                <h3 class="text-xl font-bold mb-3 text-teal-900">وكلاء الذكاء الاصطناعي ومشروع التخرج</h3>
-                                <ul class="text-slate-600 text-sm space-y-2 list-disc list-inside">
-                                    <li>بناء Custom GPTs وتدريب مساعد يفكر بطريقتك</li>
-                                    <li class="font-bold text-teal-700 mt-2">مشروع التخرج: <span class="font-normal text-slate-600">تطلع بكذا Workflow عملي توظف فيهم الـ AI بشكل فعال في حياتك وشغلك.</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Instructor Section (WHITE BG) -->
-        <section id="instructor" class="py-24 bg-white border-t border-slate-200">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2">مين هيكون معاك في الرحلة؟ 👨‍🏫</h2>
-                </div>
-                
-                <div class="bg-slate-50 p-8 md:p-12 rounded-[3rem] shadow-lg border border-slate-100 max-w-4xl mx-auto flex flex-col items-center text-center" data-aos="fade-up">
-                    
-                    <!-- Top Half: Instructor Info -->
-                    <div class="flex flex-col items-center">
-                        <img src="https://i.postimg.cc/7PRLbdNN/me.jpg" alt="محمود حرب" class="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-white ring-4 ring-teal-500 mb-6">
-                        <h3 class="text-3xl font-extrabold text-teal-800 mb-2">محمود حرب</h3>
-                        <p class="text-slate-600 font-bold text-lg mb-6">طبيب أسنان، مدرب ذكاء اصطناعي، وكاتب محتوى</p>
-                        
-                        <!-- Linktree Button -->
-                        <a href="https://linktr.ee/Mahmoud_harb18" target="_blank" class="inline-flex items-center gap-3 bg-white border-2 border-teal-500 text-teal-700 font-bold py-3 px-8 rounded-full hover:bg-teal-600 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-md">
-                            <i class="fas fa-link text-xl"></i>
-                            <span class="text-lg">روابط التواصل والبورتفوليو</span>
-                        </a>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="w-full h-px bg-slate-200 my-10"></div>
-
-                    <!-- Bottom Half: Bio -->
-                    <div class="text-slate-700 leading-relaxed space-y-5 text-lg font-medium max-w-3xl">
-                        <h4 class="text-2xl font-bold text-slate-800 mb-4 flex items-center justify-center gap-2">
-                            <i class="fas fa-info-circle text-teal-500"></i> اعرف أكتر عن المحاضر
-                        </h4>
-                        <p>أنا محمود حرب، طبيب أسنان، شغفي بالتعلم خدني لمجالات تانية كتير، أهمها كان الذكاء الاصطناعي. من كتر حبي للمجال ده، اشتغلت كمدرب AI وبقيت بتابع كل جديد فيه أول بأول.</p>
-                        <p>كنت دايمًا بلاحظ إن الناس حواليا يا إما بتخاف من الـ AI أو مش عارفة تبدأ منين. عشان كده، عملت "Smarter With AI". الهدف هنا مش بس أعلمك تستخدم أدوات، الهدف إني أساعدك تغير طريقة تفكيرك وتخلي الـ AI شريك ليك في شغلك ومذاكرتك وحياتك.</p>
-                        <div class="bg-white border border-teal-100 p-6 rounded-2xl mt-6 relative shadow-sm">
-                            <p class="font-bold text-teal-800 italic relative z-10 text-xl leading-relaxed">"أنا متحمس جدًا للرحلة دي معاك، ومستعدين نفتح سوا أبواب وفرص عمرها ما كانت هتخطر على بالك!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Ecosystem Section (TEAL GRADIENT - Color Break) -->
-        <section class="py-24 gradient-bg-section text-white">
-            <div class="container mx-auto px-6 text-center max-w-6xl">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-16" data-aos="fade-up">مش هنسيبك تتوه.. إحنا مصممين بيئة متكاملة عشانك 🎯</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="eco-card p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20" data-aos="zoom-in" data-aos-delay="100">
-                        <i class="fas fa-mobile-screen-button text-5xl mb-6 text-yellow-300"></i>
-                        <h3 class="text-xl font-bold mb-3">تطبيق الكورس</h3>
-                        <p class="text-slate-100 text-sm leading-relaxed">منصة منظمة جداً فيها المحاضرات، المرفقات، التاسكات، وروابط كل الأدوات بشكل يسهل عليك الوصول.</p>
-                    </div>
-                    <div class="eco-card p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fab fa-telegram text-5xl mb-6 text-yellow-300"></i>
-                        <h3 class="text-xl font-bold mb-3">تليجرام منظم</h3>
-                        <p class="text-slate-100 text-sm leading-relaxed">مجتمع متقسم لمجلدات (Tabs) عشان متتوهش وسط الرسايل (نقاشات، إعلانات، تسليم تاسكات).</p>
-                    </div>
-                    <div class="eco-card p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20" data-aos="zoom-in" data-aos-delay="300">
-                        <i class="fab fa-whatsapp text-5xl mb-6 text-yellow-300"></i>
-                        <h3 class="text-xl font-bold mb-3">جروب سريع</h3>
-                        <p class="text-slate-100 text-sm leading-relaxed">جروب واتساب مخصص للتنبيهات السريعة، تذكير بمواعيد اللايف، وأهم الإعلانات أول بأول.</p>
-                    </div>
-                    <div class="eco-card p-8 rounded-3xl bg-white/10 backdrop-blur-sm border border-white/20" data-aos="zoom-in" data-aos-delay="400">
-                        <i class="fas fa-network-wired text-5xl mb-6 text-yellow-300"></i>
-                        <h3 class="text-xl font-bold mb-3">مجتمع دائم</h3>
-                        <p class="text-slate-100 text-sm leading-relaxed">بمجرد تخرجك بتنضم لمجتمع الخريجين عشان نفضل على تواصل ونشارك أحدث تطورات المجال.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. Course App Section (WHITE BG) -->
-        <section id="course-app" class="py-24 bg-white border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <span class="text-teal-700 bg-teal-100 border border-teal-200 px-5 py-2 rounded-full font-bold text-sm mb-6 inline-block shadow-sm">⭐ قلب نظام المتابعة الخاص بينا</span>
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800 mb-6">تطبيق الكورس.. بيئتك المتكاملة للتعلم! 🚀</h2>
-                    <p class="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed">
-                        لو قررت تشترك في الدبلومة، فكان لازم نجمعلك كل حاجة في مكان واحد. "تطبيق الكورس" متصمم عشان يكون خريطتك ومساعدك الشخصي اللي بيمنع أي تشتت طول فترة الدبلومة وما بعدها. إيه اللي هيقدمهولك؟ 💡
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- App Feature 1 -->
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-400 shadow-sm transition-all" data-aos="fade-up">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"><i class="fas fa-layer-group"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">1. كل حاجة في مكان واحد (بدون تشتيت)</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">المحاضرات، المرفقات، وحتى الأدوات والمواقع اللي بنشرحها.. كلها موجودة ومتنظمة حسب الموضوع عشان توصل لأي أداة بضغطة زر.</p>
-                        </div>
-                    </div>
-                    <!-- App Feature 2 -->
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-400 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"><i class="fas fa-chart-line"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">2. متابعة ذكية لتقدمك (Progress Tracker)</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">عشان متكسلش، التطبيق بيوريك إنت سمعت إيه وفاضلك إيه، إيه التاسكات اللي خلصتها واللي لسه، وكمان بيفكرك بـ "الديدلاين" عشان تفضل دايماً على التراك.</p>
-                        </div>
-                    </div>
-                    <!-- App Feature 3 -->
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-400 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"><i class="fas fa-brain"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">3. هضم متكامل للمحتوى</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">عشان المعلومة تثبت، مع كل محاضرة هتلاقي (إنفوجرافيك بيلخص الدنيا، بريزنتيشن، كويزات، وفلاش كاردز للمراجعة السريعة).</p>
-                        </div>
-                    </div>
-                    <!-- App Feature 4 -->
-                    <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col items-start gap-4 hover:border-teal-400 shadow-sm transition-all" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-14 h-14 bg-teal-500 text-white rounded-xl flex items-center justify-center text-2xl shadow-md"><i class="fas fa-book-open"></i></div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-slate-800">4. النوت بوك الذكية (صفر هلوسة)</h3>
-                            <p class="text-slate-600 leading-relaxed font-medium">معاك "نوت بوك" خاصة بمنهج الدبلومة. تقدر تسألها أي سؤال يخص المحتوى، وهتجاوبك بدقة 100% من غير تأليف من الذكاء الاصطناعي، لأنها متدربة على منهجنا بس.</p>
-                        </div>
-                    </div>
-                    <!-- App Feature 5 (Spans full width) -->
-                    <div class="p-8 md:p-10 rounded-3xl bg-teal-50 border border-teal-200 flex flex-col md:flex-row items-center gap-6 md:col-span-2 hover:border-teal-400 shadow-md transition-all" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="w-20 h-20 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-4xl shadow-lg flex-shrink-0"><i class="fas fa-user-tie"></i></div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-3 text-teal-800">5. المساعد الشخصي (دكتور محمود معاك 24/7)</h3>
-                            <p class="text-slate-700 text-lg leading-relaxed font-medium">عطلان في حاجة؟ محتاج أفكار لتاسك الأسبوع؟ التطبيق جواه مساعد شخصي ذكي جداً، بيشرحلك من محتوى الدبلومة وبيرد عليك بنفس أسلوب وطريقة دكتور محمود. الميزة الأكبر؟ إنه متاح معاك 24 ساعة، ومدى الحياة!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 bg-gradient-to-r from-teal-600 to-teal-500 p-6 rounded-2xl text-center shadow-lg transform hover:-translate-y-1 transition-transform" data-aos="fade-up">
-                    <p class="text-white font-bold text-xl md:text-2xl leading-relaxed">
-                        تطبيق الكورس هو نظام متكامل متصمم عشانك بحيث يساعدك في رحلتك..<br>
-                        <span class="text-yellow-300 mt-2 block">عشان تكون أذكى بمساعدة الذكاء الاصطناعي 💚</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. Feedback Section (LIGHT GREEN/TEAL GRADIENT - Color Break) -->
-        <section id="testimonials" class="py-24 gradient-bg-custom">
-            <div class="container mx-auto px-6 max-w-7xl">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <!-- CHANGED TEXT COLOR TO TEAL-900 FOR HIGH CONTRAST -->
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-teal-900 mb-2 drop-shadow-sm">آراء شركاء النجاح من الدفعات السابقة</h2>
-                </div>
-                
-                <!-- Geometric / Masonry Layout for Testimonials -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
-                    
-                    <!-- Row 1: Long Feedback (Span 2) + Short Feedback (Span 1) -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2" data-aos="fade-up">
-                        <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                        <div class="text-slate-700 leading-relaxed font-medium space-y-4 text-[17px]">
-                            <p>"واحد من أجمل القرارات اللي أخدتها في حياتي مؤخرًا، فتح لي أشياء كتيرة جدًا، واستمتعت جدًّا جدًّا، رجعني إني لسه بعرف أعمل حاجات مميزة شاطرة فيها، وقت التاسكات كان أكتر وقت ممتع في الأسبوع."</p>
-                            <p>"مبسوطة جدًّا بالتاسكات اللي اشتغلت عليها، في شغلي، في مجالات اهتمامي، حاجات عملتها لإخواتي شخصيًا وفي شغلهم، فكرة طلعت بيها قدمتها للدكتور بتاعي وعجبته وحاليا شغالين عليها، دعواتكم الشديدة.."</p>
-                            <p>"شكرًا جدًّا جدًّا والله، مبسوطة جدًا، وهيوحشني الوقت ده، استمتعت، وممتنة.. ربنا يتقبل منكم.. <strong class="text-teal-800 block mt-2">وحاسة إني عايزة أبدأ مع الدفعة الجديدة تاني 🤣"</strong></p>
-                        </div>
-                    </div>
-                    
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card flex flex-col justify-center" data-aos="fade-up" data-aos-delay="100">
-                        <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                        <p class="text-slate-700 leading-relaxed font-medium">"الكورس مفيد جدا جدا حقيقي و استفدت منه و الشرح استثنائي و مبسط بشكل كبير لأي حد لسه مش متعمق في المجال"</p>
-                    </div>
-
-                    <!-- Row 2: Short Feedback (Span 1) + Long Feedback (Span 2) -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                        <p class="text-slate-700 leading-relaxed font-medium">"مبهر وممتع اوي .. حقيقي ببقى مستنية الشرح الجديد عشان اشوف هاا هعمل عظمة ايه المرادي ؟ سهل عليا كتير اوي وقت ومجهود مش طبيعي وجميل ان فيه دايما افكار مختلفة في كل حاجة مش محصورة في مجال معين بالعكس"</p>
-                    </div>
-                    
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                        <div class="text-slate-700 leading-relaxed font-medium space-y-3 text-[17px]">
-                            <p>"نفسي كل الناس تدخل الدبلومة حقيقي. لو حد تايه في تطورات الـ AI ومش عارف يجيبها منين ولا منين فبجد الدبلومة أيسر وأسهل وأسرع طريق."</p>
-                            <p>"مفيدة على كل المستويات تقريبا، إزاي تتعامل مع كل نماذج الـ AI، إزاي تستخدمه في تعليمك/شغلك باحترافية. الدبلومة ساعدتني جدا جدا في البحث العلمي والماركتنج لشغلي لانك هتتعلم تعمل صور وفيديوهات وأصوات AI."</p>
-                            <p>"فكرة إنك تلاقي مساعد شخصي لكل حاجة حابب تعملها دي رهيبة، كأنك معاك دماغ تانية احترافية عالمية😆 فبجد أنصح كل الناس يدخلوا الدبلومة."</p>
-                            <p class="text-teal-800 font-bold">"بالإضافة للمحتوى القيم جدا دا هتلاقوا متابعة باستمرار، نظام والدنيا واضحة جدا، تشجيع ومفاجآت.. أنا اخدت كانفا برو مجانا ع حسابي الشخصي. فبجد ذوق وأدب وأخلاق القائمين عليها في حتة تانية♥️"</p>
-                        </div>
-                    </div>
-
-                    <!-- Row 3: Three Short Feedbacks -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium">"ما شاء الله كورس جميل وممتع معاك ي دكتور محمود ربنا يكرمكم وينفع بيك ي رب 🧡"</p>
-                    </div>
-                     
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card" data-aos="fade-up" data-aos-delay="200">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium">"كورس جميل ومفيد جدا وأسلوب حضرتك مبسط وسلس ومتوفر فيه كل شيء بصراحة."</p>
-                    </div>
-                     
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card" data-aos="fade-up" data-aos-delay="300">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium">"اكتر حاجة حبيتها هي المتابعة اللي بتكون من د.محمود او من التيم حرفيًا متابعة يومية، ودي كلمة حقيقية مش مجرد حاجة بتتقال للإعلان وخلاص.. وكمان كل اللي قرأته قبل م ادخل الدبلومة لقيته موجودة الحمد لله، ربنا يباركلكوا."</p>
-                    </div>
-
-                    <!-- Row 4: New Feedbacks -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2" data-aos="fade-up" data-aos-delay="100">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium text-[16px]">"الدبلومة مفيدة جدا للمتخصص وللمبتدأ ، قدرت اعرف اهم ادوات الذكاء الاصطناعي وطبقت واي سؤال كان بيواجهني كنت بلاقي الاجابة بتتشرح وبسعة صدر وطولة بال ، حقيقي من اكتر الكورسات اللي استفدت منها بعد التخرج ولو اقدر احب انها تكون شيء أساسي للمعلمين والطلاب ومختلف المجالات ،والحمدلله ربنا يسرلي اني اشرح وحدة من الأدوات اللي اخدتها بالدبلومة لطلاب وكانوا مبسوطين جدا"</p>
-                    </div>
-
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium">"شكرا جدا على الدورة كانت مفيدة جدا بالنسبة لي، وكتر خيركم على الإحسان في كل التفاصيل، وعلى الأكونتاات االي أخدناها علشان نجرب عملي وما يبقى نظري بس، وعلى أكونت كانفا، وعلى الاهتمام بالإجابة على كل الأسئلة، شكرا جدا"</p>
-                    </div>
-
-                    <!-- Row 5: Medium Feedback + Medium Feedback -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2" data-aos="fade-up" data-aos-delay="100">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <div class="text-slate-700 flex-grow leading-relaxed font-medium text-[16px] space-y-3">
-                             <p>"الدبلومة كانت اللهم بارك جميلة جدا جدا، استفدت منها كتير وفادتني كتير حتي غيرت من طريقة تفكيري عن الـ AI وانه ممكن اعمل منه حاجات كتير مفيده اكتر من ضرره."</p>
-                             <p>"الشرح جميل وبسيط ومباشر وواضح وجه آحلي حاجه دكتور محمود كان متعاون وعنده إحسان بأكبر شكل ممكن شوفته بصراحه ربنا ينفع بيه ويبارك له دايما بجد.. انصح فيها وبشددده"</p>
-                         </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium">"استمتعت جدًا بالدبلومة، وحسيت إنها فعلًا أضافتلي. اتعلمت منها أدوات ومهارات جديدة، وكل محاضرة كنت بطلع منها بحاجة مفيدة فشكرا جدا"</p>
-                    </div>
-
-                    <!-- Row 6: Very Long Story Feedback + Medium Feedback -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2" data-aos="fade-up" data-aos-delay="100">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <div class="text-slate-700 flex-grow leading-relaxed font-medium text-[16px] space-y-3">
-                             <p>"من زمان وأنا منبهرة بعالم الذكاء الاصطناعي، لكن فكرة اني اتعلمه كانت مخيفة شوية بالنسبة لي وموترة جدا. خصوصا لما بدأت أدور و أحاول أتعلم كمية الكورسات اللي قابلتني، وكمية بوستات ازاي تتعلم ال AI في ساعتين وتكسب مليون دولار في شهر دي قفلتني شوية."</p>
-                             <p>"ويمكن عشان كدة ربنا بعتلي الدبلومة دي ، من بوست لواحدة خريجة جميلة ماكنتش أعرفها قبل كدة لكن ظهرلي البوست بتاعها بالصدفة. ف دخلت اسأل وعرفت محتوى الدبلومة واتحمست اني ادخلها. الدبلومة شاملة ومبسطة في نفس الوقت، هو بيعلمك ألف باء ذكاء اصطناعي وفي نفس الوقت يخليك تاخد منه نتيجة زي المحترفين."</p>
-                             <p>"دكتور محمود من الناس الخلوقة جدا جدا ، ومجتهد أوي أوي ومتابع دايما للجديد، ويجاوب على كل الاستفسارات . انا يمكن ماكنتش طالبة شاطرة اوي وكنت بسمع المحاضرة وبطبق متأخر دايما، لكن حقيقي المحتوى أكتر من رائع وبرشحه لكل اللي اعرفهم"</p>
-                         </div>
-                    </div>
-
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card flex flex-col justify-center" data-aos="fade-up" data-aos-delay="200">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <p class="text-slate-700 flex-grow leading-relaxed font-medium text-[15px]">"انصح جدا اي حد انه يبدأ بالخطوة دي وياخد الكورس المكثف ده، لانه فعلا ملم بمعلومات كتيره تفيدك في مجالك وبدل ما تكون وسط ناس شغاله بالـ ai وانت لسه في عصر الورقه والقلم والعمل اللي بياخد ساعات ومش بيكون بنفس الخدمه بتاع ال ai"</p>
-                    </div>
-
-                    <!-- Row 7: Final Featured Wide Feedback -->
-                    <div class="p-8 rounded-3xl shadow-xl border testimonial-card md:col-span-2 lg:col-span-3" data-aos="fade-up" data-aos-delay="300">
-                         <i class="fas fa-quote-right text-teal-500 text-3xl mb-4"></i>
-                         <div class="text-slate-700 flex-grow leading-relaxed font-medium text-lg space-y-3">
-                             <p>"دبلومة Smarter With AI.. اللي عجبني إنها مش مجرد معلومات نظرية، لكن تطبيق عملي على أدوات الذكاء الاصطناعي اللي بنستخدمها فعلًا في الشغل، مع شرح بسيط ومنظم حتى لو لسه بتبدأ."</p>
-                             <p class="font-bold text-teal-800">"لو حد بيفكر يدخل مجال الـ AI أو يطور شغله ويواكب التطور، فأرشح دبلومة Smarter With AI بكل ثقة. تستحق الوقت والمجهود، وهتحس بفرق حقيقي في إنتاجيتك وطريقة شغلك."</p>
-                         </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 11. Final CTA Section (DARK TEAL BG - Strong Final Break) -->
-        <section id="cta" class="py-32 bg-teal-900 text-white relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-            <div class="container mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
-                <h2 class="text-4xl md:text-5xl font-black mb-6">جاهز تكون الأذكى في مجالك؟ 🚀</h2>
-                <p class="text-2xl md:text-3xl text-yellow-300 font-bold mb-4">خلينا متفقين إن الذكاء الاصطناعي مش هو المستقبل.. ده الحاضر!!</p>
-                <p class="text-3xl md:text-4xl font-extrabold mb-6 text-white">عايز تحفظ مكانك؟!</p>
-                <p class="text-xl md:text-2xl font-medium mb-12 text-teal-100 leading-relaxed">
-                    خدماتنا هي خطوتك الأولى عشان تكون دايمًا سابق بخطوة.
-                </p>
-                
-                <a href="https://wa.me/201007964766?text=السلام%20عليكم،%20محتاج%20أستفسر%20عن%20الخدمات%20المتاحة%20(الاستشارات%20أو%20الدبلومة)" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-400 text-white font-black py-6 px-10 rounded-2xl text-2xl md:text-3xl transition-all duration-300 shadow-[0_0_30px_rgba(34,197,94,0.5)] transform hover:-translate-y-2 w-full max-w-2xl mx-auto mb-12">
-                    <i class="fab fa-whatsapp ml-4 text-4xl"></i>
-                    تواصل معنا الآن عبر واتساب
-                </a>
-                
-                <div class="bg-teal-800/50 p-8 md:p-10 rounded-3xl max-w-4xl mx-auto border border-teal-700 shadow-inner mt-4">
-                    <p class="text-xl md:text-2xl text-white mb-8 font-bold leading-relaxed">
-                        👇 لو مش متخيل أو مش عارف الذكاء الاصطناعي ممكن يساعدك إزاي، ابعتلنا طبيعة شغلك أو دراستك وخلينا نقولك إزاي الذكاء الاصطناعي ممكن يخليك أذكى وسابق عن اللي حواليك!
-                    </p>
-                    <div class="bg-teal-900/70 p-6 rounded-2xl border border-teal-700/50 text-right">
-                        <p class="text-teal-100 text-lg font-medium leading-relaxed">
-                            <span class="text-yellow-300 font-bold"><i class="fas fa-lightbulb ml-2"></i>ملحوظة:</span> يُفضل تشاركنا لو بتستخدمه بالفعل، بتستخدمه في إيه وإيه المشاكل أو التحديات اللي بتواجهك.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 12. FAQ Section (SLATE-50 BG) -->
-        <section id="faq" class="py-24 bg-slate-50 border-t border-slate-200">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 text-slate-800">كل اللي بيدور في دماغك.. إجابته هنا <span class="text-red-500">؟</span></h2>
-                
-                <!-- Frame around all FAQs -->
-                <div class="bg-white p-4 md:p-8 rounded-[2rem] shadow-xl border-2 border-teal-100">
-                    <div class="space-y-4 text-right">
-                        
-                        <!-- FAQ 1 (Diploma) -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">🤔 إيه الفرق بين الدبلومة المسجلة والدبلومة اللايف (VIP)؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium space-y-3 bg-white border-t border-slate-200">
-                                    <p><strong>🟢 الدبلومة المسجلة:</strong> بتحصل على آخر نسخة مكتملة فوراً، وبتدرس براحتك في أي وقت، وبسعر موفر جداً. (ملاحظة: الفيديوهات مسجلة فلو ظهرت تحديثات للأدوات مش هتكون مشروحة فيها).</p>
-                                    <p><strong>🟣 الدبلومة اللايف (VIP):</strong> بتاخد كل اللي فات + محاضرة لايف أسبوعية للتطبيق العملي، وشرح حصري لأحدث التطورات، وهدايا حسابات مدفوعة (Pro)، ومتاح فيها نظام التقسيط المريح.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Consultations 1 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">💡 إيه هي الاستشارة الشخصية ومين يقدر يستفيد منها؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>الاستشارة هي جلسة (1-on-1) مخصصة ليك ولشغلك تماماً. بتشرحلنا مشكلتك أو هدفك، وبنحطلك خطة عملية أو Workflow مخصوص يحل مشكلتك باستخدام أدوات الذكاء الاصطناعي المناسبة. الخدمة دي ممتازة جداً لأصحاب المشاريع، المديرين، أو أي شخص وقته ضيق ومحتاج حلول فورية ومباشرة لمجاله بدون ما يدرس دبلومة كاملة.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Consultations 2 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">📅 إزاي بحجز الاستشارة وبتكون مدتها قد إيه؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>الموضوع بسيط جداً! بتبعتلنا رسالة على الواتساب فيها "بريف" أو ملخص سريع لطلبك وطبيعة شغلك. بناءً عليه بنحدد الوقت المطلوب (غالباً بيكون بنظام الساعة)، وبننسق ميعاد مناسب ليك. الجلسة بتكون لايف أونلاين (على Google Meet).</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Consultations 3 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">🎥 هل الاستشارة بتتسجل عشان أقدر أرجعلها بعدين؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>أكيد! الجلسة بتكون مسجلة بالكامل فيديو، وبنبعتلك التسجيل فور انتهاء الاستشارة مع أي لينكات أو أدوات استخدمناها أو رشحناها ليك، عشان تكون مرجع دائم ليك وتقدر تراجع الخطوات في أي وقت براحتك.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 2 (General) -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">عارف إن الذكاء الاصطناعي مفيد، بس مش عارف هيفيدني إزاي في مجالي؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>تقدر تبعتلنا طبيعة شغلك ومهتم الذكاء الاصطناعي يساعدك في إيه، وإحنا هنديلك أمثلة عملية عن إزاي ممكن يساعدك ويفرق معاك بشكل لا تتخيله في يومك وشغلك.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 3 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">المحاضرات بتكون Live ولا مسجلة؟ ولو فاتني اللايف أعمل إيه؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>في مسار الدبلومة الشاملة، المحاضرات بتكون Live عشان نتفاعل ونطبق سوا. بس متقلقش، كل محاضرة بتتسجل وبتنزل فوراً على "تطبيق الكورس" عشان ترجعلها في أي وقت وتراجع منها براحتك.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 4 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">إزاي بتأكد إني فهمت وبطبق صح؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>عشان كده عملنا نظام (الـ Tasks). بعد كل محاضرة في تطبيق عملي بتعمله وبنتابعه معاك ونديك Feedback. كمان التزامك بالتاسكات بيديك نقاط بتتحول لهدايا ومكافآت!</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 5 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">هل هحتاج أدفع اشتراكات شهرية في أدوات الذكاء الاصطناعي؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>إحنا بنركز على الأدوات المجانية بحيث الموضوع يعتمد على استخدامك وبتحتاجه في إيه. وكمان انتظامك في التاسكات بيخليك تكسب هدايا معانا زي اشتراكات مدفوعة (Google Pro مثلاً) وهدايا تانية كتير! ومعلومة مهمة: إحنا بنشرح كل مميزات الأدوات سواء المتواجدة في النسخة المجانية أو المدفوعة، وده ضروري عشان لو اشتركت تستفاد بكل الإمكانيات وتبقى عارف الاستخدامات الكاملة لكل أداة.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 6 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">هل الكورس ده محتاج أكون شاطر في الإنجليزي أو البرمجة؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>إطلاقاً! الكورس بيبدأ معاك من الصفر تماماً. وكل الأدوات اللي بنشرحها بنركز جداً على إنها تكون بتدعم اللغة العربية بكفاءة عالية، ومش هنكتب سطر كود واحد.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 7 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">علاقتي بالكورس بتنتهي بعد الشهرين؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>بالعكس، دي بتبدأ! بمجرد تخرجك بتنضم لـ "مجتمع خريجين Smarter With AI"، بيكون فيه لايف دوري، ومشاركة للتحديثات المستمرة عشان نفضل دايماً مواكبين التطور وفي ضهر بعض.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 8 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">هل الدبلومة محتاجة لابتوب ولا عادي بالفون؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>لأ مش لازم لاب توب، حسب استخدام حضرتك، ممكن يكون الموبايل كافي جداً وممكن تحتاجي اللاب أو الكمبيوتر لو عاوزة الموضوع يكون سلس خصوصاً لو بتعملي حاجات متقدمة أو فيها تفاصيل اكتر، الفكرة إن التجربة ساعتها علي اللاب بتكون أسهل لكن ما زالت ممكنة علي الموبايل بنسبة كبيرة.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 9 -->
-                        <div class="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden">
-                            <button class="accordion-button w-full flex justify-between items-center p-5 md:p-6 font-bold text-slate-800 text-lg hover:bg-slate-100 transition-colors">
-                                <span class="text-right">دايماً بيكون فيه تطورات في الذكاء الاصطناعي.. فهل المحتوى متجدد؟</span>
-                                <div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-sm shrink-0 mr-4">
-                                    <i class="fas fa-chevron-down accordion-icon text-teal-600 transition-transform"></i>
-                                </div>
-                            </button>
-                            <div class="accordion-content">
-                                <div class="p-5 md:p-6 text-slate-700 leading-relaxed font-medium bg-white border-t border-slate-200">
-                                    <p>متجدد باستمرار الحمد لله! سواء على الجروب او في المحاضرات، دايماً بنبدأ بأي أخبار او تحديثات عن مواضيع اتكلمنا عنها، لحد آخر يوم في الدبلومة. وبعد الدبلومة بيكون عندنا مجتمع Smarter With AI بحيث نكمل رحلتنا اللي بدأناها مع بعض وتفضل دايماً سابق بخطوة.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-teal-900 text-white pt-20 pb-10 border-t border-teal-800">
-        <div class="container mx-auto px-6 text-center">
-            <a href="#" class="mb-8 inline-block logo-container">
-                <img src="https://i.postimg.cc/kg2KBzzN/Untitled-design.png" alt="Logo">
-            </a>
-            <p class="text-teal-100 mb-8 max-w-md mx-auto text-lg leading-relaxed">رحلة التعلم في عصر الذكاء الاصطناعي بقت أسهل وأمتع.<br><span class="text-white font-bold">انضم لمجتمعنا وخليك دايماً Smarter With Ai.</span></p>
-            
-            <div class="flex justify-center gap-4 mb-10 flex-wrap">
-                <a href="https://www.facebook.com/profile.php?id=61577068962672" target="_blank" class="w-14 h-14 bg-teal-800 rounded-full flex items-center justify-center text-2xl text-teal-200 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110 shadow-lg" title="صفحة الفيسبوك"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.facebook.com/groups/1106148034264004" target="_blank" class="w-14 h-14 bg-teal-800 rounded-full flex items-center justify-center text-2xl text-teal-200 hover:bg-blue-500 hover:text-white transition-all transform hover:scale-110 shadow-lg" title="جروب الفيسبوك"><i class="fas fa-users"></i></a>
-                <a href="https://t.me/Smarter_With_Ai" target="_blank" class="w-14 h-14 bg-teal-800 rounded-full flex items-center justify-center text-2xl text-teal-200 hover:bg-blue-400 hover:text-white transition-all transform hover:scale-110 shadow-lg" title="قناة التليجرام"><i class="fab fa-telegram-plane"></i></a>
-                <a href="https://youtube.com/@smarterwithai18?si=aMFzVqyd1bK0QRSV" target="_blank" class="w-14 h-14 bg-teal-800 rounded-full flex items-center justify-center text-2xl text-teal-200 hover:bg-red-600 hover:text-white transition-all transform hover:scale-110 shadow-lg" title="قناة اليوتيوب"><i class="fab fa-youtube"></i></a>
-            </div>
-            
-            <p class="text-sm text-teal-400 font-medium">© 2025 منصة Smarter With AI. صُنع بـ ❤️ بواسطة محمود حرب</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true, offset: 50 });
-
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('shadow-md', window.scrollY > 50);
-            header.classList.toggle('bg-teal-900', window.scrollY > 50);
-        });
-        
-        // Fixed Accordion Logic
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        accordionButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const wasActive = button.classList.contains('active');
-                
-                // Close all other accordions
-                accordionButtons.forEach(b => {
-                    b.classList.remove('active');
-                    b.nextElementSibling.style.maxHeight = null;
-                });
-
-                // Open the clicked one if it wasn't already active
-                if (!wasActive) {
-                    button.classList.add('active');
-                    content.style.maxHeight = content.scrollHeight + 'px';
-                }
-            });
-        });
-    </script>
+<body>
+<div class="bg-brand-green text-brand-navy text-center py-2.5 px-4 font-extrabold text-sm md:text-base" id="top">خصم 40% على الاشتراك في دبلومة Smarter With AI لفترة محدودة</div>
+<header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur border-b border-brand-navy/10">
+<nav class="max-w-7xl mx-auto px-4 sm:px-6 h-[78px] flex items-center justify-between gap-4">
+<a class="flex items-center gap-3 min-w-0" href="#top"><img alt="شعار Smarter With AI" class="h-11 w-auto rounded-lg bg-white p-1 shadow-sm" src="https://i.postimg.cc/kg2KBzzN/Untitled-design.png"/><span class="hidden sm:block font-black text-sm">دبلومة Smarter With AI</span></a>
+<div class="desktop-nav items-center gap-5 text-sm font-bold"><a href="#benefits">هتستفيد إيه؟</a><a href="#audience">تنفع لمين؟</a><a href="#content">المحتوى</a><a href="#experience">التجربة</a><a href="#reviews">الآراء</a><a href="#faq">الأسئلة</a></div>
+<a class="shrink-0 inline-flex items-center gap-2 bg-brand-navy text-white px-4 md:px-5 py-3 rounded-xl font-black text-sm" href="#enroll"><i class="fa-solid fa-circle-info text-lg"></i><span class="hidden sm:inline">تفاصيل الاشتراك</span><span class="sm:hidden">الاشتراك</span></a>
+</nav>
+</header>
+<main>
+<section class="overflow-hidden bg-brand-navy text-white hero-grid">
+<div class="absolute -top-28 -left-24 w-80 h-80 rounded-full bg-brand-green/15 blur-3xl"></div><div class="absolute -bottom-36 -right-24 w-96 h-96 rounded-full bg-brand-green/10 blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24 relative">
+<div class="grid lg:grid-cols-[1.07fr_.93fr] gap-12 items-center">
+<div>
+<span class="eyebrow bg-white/10 border border-white/15 text-brand-green mb-6"><i class="fa-solid fa-arrow-trend-up"></i> من الصفر للاحتراف — مهما كان مستواك</span>
+<h1 class="hero-title mb-6">اتعلّم تستخدم الذكاء الاصطناعي باحتراف… <span class="text-brand-green">وتطبّقه في شغلك ودراستك والحاجات اللي بتهمك</span></h1>
+<p class="text-lg md:text-xl text-slate-200 max-w-3xl mb-5">دبلومة عملية شاملة تبدأ معاك من الأساسيات، وتوصلك لاستخدام أقوى في البحث والتعلّم، صناعة المحتوى والعروض، الصور والصوت والفيديو، وبناء المواقع والأدوات البسيطة.</p>
+<p class="text-base md:text-lg text-slate-300 max-w-3xl mb-8">سواء أول مرة تستخدم أدوات الذكاء الاصطناعي، أو بتستخدمها بالفعل وعايز تطوّر مستواك، هتلاقي شرحًا مرتبًا وأمثلة وتطبيقات تساعدك تتحرك من مستواك الحالي خطوة بخطوة.</p>
+<div class="flex flex-col sm:flex-row gap-3 mb-9"><a class="inline-flex justify-center items-center gap-3 bg-brand-green text-brand-navy px-7 py-4 rounded-xl font-black text-lg shadow-lg" href="#content"><i class="fa-solid fa-list-check text-xl"></i> شوف محتوى الدبلومة</a><a class="inline-flex justify-center items-center gap-2 bg-white/10 border border-white/15 px-7 py-4 rounded-xl font-black" href="#enroll">احجز مكانك في الدبلومة <i class="fa-solid fa-arrow-down"></i></a></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl"><div class="glass rounded-2xl p-4"><strong class="block text-xl text-brand-green">10 أسابيع</strong><span class="text-sm text-slate-300">من الأساس للتطبيق المتقدم</span></div><div class="glass rounded-2xl p-4"><strong class="block text-xl text-brand-green">تطبيق عملي</strong><span class="text-sm text-slate-300">بعد كل جزء</span></div><div class="glass rounded-2xl p-4"><strong class="block text-xl text-brand-green">لايف أو مسجل</strong><span class="text-sm text-slate-300">اختار الأنسب ليك</span></div><div class="glass rounded-2xl p-4"><strong class="block text-xl text-brand-green">متابعة وتحديثات</strong><span class="text-sm text-slate-300">حتى بعد المحاضرات</span></div></div>
+</div>
+<div class="relative"><div class="absolute -inset-3 rounded-[2rem] bg-brand-green/20 blur-xl"></div><div class="relative bg-white p-2 rounded-[1.6rem] shadow-2xl"><div class="relative aspect-video rounded-[1.15rem] overflow-hidden bg-black"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="absolute inset-0 w-full h-full" loading="lazy" src="https://www.youtube.com/embed/RqHk7ogCqrs" title="تعريف دبلومة Smarter With AI"></iframe></div></div><div class="relative mt-4 bg-white text-brand-navy rounded-2xl p-5 shadow-card"><div class="flex items-center gap-3 mb-2"><span class="w-11 h-11 rounded-xl bg-brand-green/20 flex items-center justify-center text-brand-greenDark"><i class="fa-solid fa-heart"></i></span><strong>الدبلومة شاملة ومبسطة في نفس الوقت</strong></div><p class="text-sm text-slate-600 m-0">بتبدأ معاك من ألف باء، وفي نفس الوقت تساعدك تطلع نتائج قوية تناسب شغلك أو دراستك أو مشروعك.</p></div></div>
+</div>
+</div>
+</section>
+<section class="py-12 bg-brand-green text-brand-navy">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 text-center"><p class="text-xl md:text-2xl font-black max-w-4xl mx-auto">“المحتوى أكتر من رائع… والقيمة أكبر بكتير من اللي كنت متوقعاه.”</p><div aria-label="5 نجوم" class="flex justify-center gap-1 text-amber-500 mt-3"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+</section><section class="py-20 md:py-24 bg-white" id="start-level">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="section-frame">
+<div class="text-center max-w-4xl mx-auto mb-10">
+<span class="eyebrow bg-brand-green/15 text-brand-greenDark mb-5">ابدأ من مستواك الحالي</span>
+<h2 class="section-title mb-5">اختار الوصف الأقرب ليك… وهتعرف الدبلومة هتبدأ معاك منين</h2>
+<p class="section-copy mx-auto">مش مطلوب منك تكون خبير ولا تبدأ من نقطة معينة. اقرأ المستويات الثلاثة، وحدد الأقرب ليك؛ الشرح يبدأ من الأساس، وبعدها يتدرج لحد التطبيقات الأقوى.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-5">
+<article class="level-card card-hover">
+<span class="level-number">1</span>
+<h3>أول مرة تبدأ</h3>
+<p>هتفهم المصطلحات والأدوات الأساسية، وإزاي تسأل صح وتراجع الإجابة بدل ما تستخدم الأداة بشكل عشوائي.</p>
+</article>
+<article class="level-card card-hover featured-level">
+<span class="level-number">2</span>
+<h3>بتستخدم AI على فترات</h3>
+<p>هترتب معلوماتك، وتتعلم طرق أوضح للبحث والتعلّم والمحتوى، وتعرف تختار الأداة الأنسب لكل مهمة.</p>
+</article>
+<article class="level-card card-hover">
+<span class="level-number">3</span>
+<h3>عندك خبرة وعايز مستوى أقوى</h3>
+<p>هتطوّر جودة النتائج، وتستخدم المساعدين والصور والفيديو والمواقع في تطبيقات أوسع مرتبطة بشغلك أو مشروعك.</p>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="max-w-4xl mx-auto text-center mb-12"><span class="eyebrow bg-brand-green/15 text-brand-greenDark mb-5">يمكن المشكلة مش فيك</span><h2 class="section-title mb-5">يمكن أنت مش محتاج أداة جديدة… أنت محتاج تعرف تستخدم اللي قدامك صح</h2><p class="section-copy mx-auto">كل يوم بنسمع عن أداة جديدة، فنبدأ نجرب ونفتح تابات كتير ونحفظ أوامر جاهزة، لكن النتيجة تفضل عشوائية. الدبلومة بترتب لك الصورة من البداية، وتخليك تفهم تختار إيه وتستخدمه إمتى وإزاي.</p></div><div class="grid md:grid-cols-3 gap-5"><article class="card-hover benefit-card bg-brand-sand"><span class="icon-box bg-white text-rose-500"><i class="fa-solid fa-compass"></i></span><h3 class="text-xl font-black mb-3">مش عارف تبدأ منين</h3><p>أسماء وأدوات كتير، وكل حد بيرشح حاجة مختلفة، فبتفضل واقف مكانك أو بتتنقل من فيديو لفيديو.</p></article><article class="card-hover benefit-card bg-brand-sand"><span class="icon-box bg-white text-amber-500"><i class="fa-solid fa-hourglass-half"></i></span><h3 class="text-xl font-black mb-3">بتجرب أكتر ما بتنجز</h3><p>تدخل في محاولات طويلة عشان تطلع نتيجة بسيطة، أو تسيب الأداة لأن أول نتيجة ما عجبتكش.</p></article><article class="card-hover benefit-card bg-brand-sand"><span class="icon-box bg-white text-blue-600"><i class="fa-solid fa-circle-question"></i></span><h3 class="text-xl font-black mb-3">مش واثق في النتيجة</h3><p>مش عارف المعلومة صح ولا لأ، ولا إمتى تبحث، ولا إزاي تراجع المصادر قبل ما تستخدم الكلام.</p></article></div></div>
+</section>
+<section class="py-20 md:py-28 bg-brand-cream" id="benefits">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="section-frame">
+<div class="max-w-4xl mx-auto text-center mb-12">
+<span class="eyebrow bg-white border border-brand-navy/10 text-brand-greenDark mb-5">هتستفيد إيه؟</span>
+<h2 class="section-title mb-5">بعد الدبلومة هتعرف تستخدم الذكاء الاصطناعي في مهام حقيقية بتقابلك كل يوم</h2>
+<p class="section-copy mx-auto">الموضوع مش حفظ أسماء مواقع. كل جزء مربوط باستخدام واضح تقدر تطبقه في دراستك أو شغلك أو محتواك أو مشروعك.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+<article class="card-hover benefit-card"><span class="icon-box bg-brand-green/15 text-brand-greenDark"><i class="fa-solid fa-comment-dots"></i></span><h3 class="text-xl font-black mb-3">تتواصل مع الأدوات بشكل صح</h3><p>تشرح هدفك والسياق والجمهور والتفاصيل، وتخلي الأداة تسألك عن الناقص عشان تطلع نتيجة أقرب للي محتاجه.</p></article>
+<article class="card-hover benefit-card"><span class="icon-box bg-blue-50 text-blue-600"><i class="fa-solid fa-magnifying-glass"></i></span><h3 class="text-xl font-black mb-3">تبحث بمصادر وتراجع المعلومات</h3><p>تفرق بين إجابة عامة وبحث موثّق، وتعرف إمتى تستخدم البحث السريع أو العميق وإزاي تتأكد من النتيجة قبل اعتمادها.</p></article>
+<article class="card-hover benefit-card"><span class="icon-box bg-purple-50 text-purple-600"><i class="fa-solid fa-graduation-cap"></i></span><h3 class="text-xl font-black mb-3">تتعلم وتراجع أسرع</h3><p>تحول الكتب والمحاضرات والكورسات لملخصات وأسئلة وFlashcards وعروض ومساحات تقدر تسألها وترجع لها بسهولة.</p></article>
+<article class="card-hover benefit-card"><span class="icon-box bg-rose-50 text-rose-600"><i class="fa-solid fa-pen-nib"></i></span><h3 class="text-xl font-black mb-3">تكتب محتوى وعروض تناسب جمهورك</h3><p>تولد أفكارًا، تكتب بوستات وسكريبتات وتقارير، وتحوّل نفس الفكرة لأكتر من شكل من غير ما يطلع الكلام عامًا أو مكررًا.</p></article>
+<article class="card-hover benefit-card"><span class="icon-box bg-amber-50 text-amber-600"><i class="fa-solid fa-photo-film"></i></span><h3 class="text-xl font-black mb-3">تنتج صورًا وصوتًا وفيديو</h3><p>تعمل تصميمات وإنفوجرافيك وتعليقًا صوتيًا وأفاتارًا وفيديوهات تعليمية أو تسويقية حتى لو مش عندك خبرة سابقة في الإنتاج.</p></article>
+<article class="card-hover benefit-card"><span class="icon-box bg-emerald-50 text-emerald-600"><i class="fa-solid fa-laptop-code"></i></span><h3 class="text-xl font-black mb-3">تبني موقعًا أو أداة تخدم فكرتك</h3><p>تحوّل وصفك لصفحة أو موقع أو تطبيق بسيط، وتراجع النسخة وتطلب التعديلات لحد ما تبقى مناسبة للاستخدام على الموبايل واللاب.</p></article>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-white" id="audience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<div class="section-frame">
+<div class="text-center max-w-4xl mx-auto mb-12">
+<span class="eyebrow bg-brand-green/15 text-brand-greenDark mb-5">الدبلومة تنفع لمين؟</span>
+<h2 class="section-title mb-5">من الصفر للاحتراف — سواء بتبدأ لأول مرة أو عايز تطوّر استخدامك الحالي</h2>
+<p class="section-copy mx-auto">المحتوى بيبدأ من الأساسيات، لكنه مش للمبتدئين فقط. كل شخص بيطبّق الأمثلة على احتياجه ومستواه، عشان يطلع باستفادة حقيقية تخصه.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+<article class="card-hover audience-card"><span class="icon-box bg-brand-green/15 text-brand-greenDark"><i class="fa-solid fa-seedling"></i></span><h3 class="text-xl font-black mb-3">مبتدئ ومش عارف تبدأ منين</h3><p>هتبدأ خطوة بخطوة، وتفهم الأدوات والمصطلحات من غير افتراض إن عندك خبرة تقنية سابقة.</p></article>
+<article class="card-hover audience-card"><span class="icon-box bg-cyan-50 text-cyan-600"><i class="fa-solid fa-arrow-trend-up"></i></span><h3 class="text-xl font-black mb-3">بتستخدم AI وعايز تطوّر مستواك</h3><p>هتخرج من الاستخدام المتقطع لتطبيقات أوسع ونتائج أدق في المهام اللي بتعملها بالفعل.</p></article>
+<article class="card-hover audience-card"><span class="icon-box bg-blue-50 text-blue-600"><i class="fa-solid fa-user-graduate"></i></span><h3 class="text-xl font-black mb-3">طالب أو باحث</h3><p>تفهم المحاضرات، تنظم المصادر، تعمل أسئلة ومراجعات، وتجهز بحثًا أو عرضًا تقديميًا بشكل أسرع وأوضح.</p></article>
+<article class="card-hover audience-card"><span class="icon-box bg-purple-50 text-purple-600"><i class="fa-solid fa-briefcase"></i></span><h3 class="text-xl font-black mb-3">موظف أو مستقل</h3><p>تنجز التقارير والعروض والمراسلات والمهام المتكررة بشكل أسرع، وتستخدم أدوات تناسب طبيعة شغلك.</p></article>
+<article class="card-hover audience-card"><span class="icon-box bg-rose-50 text-rose-600"><i class="fa-solid fa-video"></i></span><h3 class="text-xl font-black mb-3">صانع محتوى أو مسوّق</h3><p>تكتب أفكارًا وسكريبتات، وتنتج صورًا وصوتًا وفيديو، وتعيد استخدام المحتوى بأشكال تناسب جمهورك.</p></article>
+<article class="card-hover audience-card"><span class="icon-box bg-amber-50 text-amber-600"><i class="fa-solid fa-rocket"></i></span><h3 class="text-xl font-black mb-3">صاحب مشروع أو فكرة</h3><p>تجهز محتوى وتسويقًا وعروضًا، وتبني موقعًا أو أداة بسيطة تساعدك في عرض مشروعك وإدارته.</p></article>
+</div>
+<div class="audience-note mt-7"><i class="fa-solid fa-circle-check"></i><div><strong>المطلوب منك:</strong> تختار حاجة حقيقية تهمك، وتجرب عليها بعد كل جزء. الدبلومة مناسبة للي عايز يتعلم ويطبّق، مش للي عايز يتفرج على الأدوات فقط.</div></div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-brand-sand" id="content">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="section-frame bg-brand-cream">
+<div class="text-center max-w-4xl mx-auto mb-12">
+<span class="eyebrow bg-white border border-brand-navy/10 text-brand-greenDark mb-5">محتوى الدبلومة</span>
+<h2 class="section-title mb-5">10 أسابيع تبدأ من الأساسيات وتوصلك لتطبيقات متقدمة</h2>
+<p class="section-copy mx-auto">كل أسبوع له هدف واضح، ومحاور محددة، وتطبيق تعرف بعده تعمل إيه. افتح أي أسبوع وشوف التفاصيل.</p>
+</div>
+<div class="space-y-5">
+<article class="week-item">
+<button aria-expanded="true" class="week-button active">
+<div class="week-title-wrap"><span class="week-number">1</span><div><small>الأسبوع 1</small><h3>افهم الذكاء الاصطناعي واتعامل معاه صح</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer" style="max-height:900px">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>ابدأ من الأساس، وافهم ليه نفس الأداة ممكن تدي شخص نتيجة ممتازة وشخص تاني نتيجة ضعيفة.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>أنواع الذكاء الاصطناعي والفرق بين النماذج والمساعدين والوكلاء</span></li><li><i class="fa-solid fa-check"></i><span>ChatGPT وGemini وClaude ونقاط قوة كل واحد</span></li><li><i class="fa-solid fa-check"></i><span>إزاي تكتب طلب واضح وتدي سياق كفاية</span></li><li><i class="fa-solid fa-check"></i><span>الهلوسة، البيانات القديمة، الخصوصية، ومراجعة الإجابات</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تختار الأداة المناسبة، وتكتب طلب أقوى، وتعرف إمتى تعتمد على النتيجة وإمتى لازم تراجعها.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">2</span><div><small>الأسبوع 2</small><h3>البحث والتعلّم من مصادر موثوقة</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>خلّي الذكاء الاصطناعي يساعدك تفهم وتبحث وتراجع، بدل ما تاخد إجابة شكلها مقنع وخلاص.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>البحث السريع والبحث العميق وإظهار المصادر</span></li><li><i class="fa-solid fa-check"></i><span>متابعة الأخبار والتحديثات في أي موضوع يهمك</span></li><li><i class="fa-solid fa-check"></i><span>استخدام NotebookLM مع الكتب والمحاضرات والملفات</span></li><li><i class="fa-solid fa-check"></i><span>الملخصات والاختبارات والـFlashcards والبودكاست والعروض</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تحوّل ملفاتك أو كورسك لمساحة تسألها وتذاكر منها، وتعرف كل معلومة جت منين.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">3</span><div><small>الأسبوع 3</small><h3>ابنِ مساعدك الشخصي ومساحة شغلك</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>بدل ما تشرح نفسك من الأول في كل مرة، جهّز مساعدًا فاهم احتياجك وطريقة الشغل اللي تناسبك.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>Custom GPTs وGemini Gems والمشاريع</span></li><li><i class="fa-solid fa-check"></i><span>كتابة تعليمات المساعد ورفع ملفاته</span></li><li><i class="fa-solid fa-check"></i><span>اختباره وتعديل ردوده وحدوده</span></li><li><i class="fa-solid fa-check"></i><span>استخدام Gemini وChatGPT داخل أدوات الشغل والعروض والجداول</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تعمل مساعدًا لمهمة متكررة عندك، سواء للدراسة أو المحتوى أو البحث أو الشغل.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">4</span><div><small>الأسبوع 4</small><h3>العروض التقديمية والصور</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>حوّل المحتوى الخام لفكرة واضحة وشكل جذاب، من غير ما تبدأ التصميم من صفحة فاضية.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>عمل Presentation سريعة أو مفصلة خطوة بخطوة</span></li><li><i class="fa-solid fa-check"></i><span>تحويل المحتوى إلى Carousel مناسب للسوشيال ميديا</span></li><li><i class="fa-solid fa-check"></i><span>إنشاء صور من وصف أو مرجع أو صورة موجودة</span></li><li><i class="fa-solid fa-check"></i><span>اختيار الأسلوب والمقاس والتفاصيل وتعديل النتيجة</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تجهّز عرضًا احترافيًا وصورًا وتصميمات مناسبة لفكرتك حتى لو مش مصمم.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">5</span><div><small>الأسبوع 5</small><h3>الإنفوجرافيك وكانفا والهوية البصرية</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>رتّب المعلومات بصريًا، وعدّل النتائج لحد ما تبقى جاهزة للنشر أو العرض.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>تحويل المعلومات المعقدة لإنفوجرافيك واضح</span></li><li><i class="fa-solid fa-check"></i><span>أهم أدوات Canva والذكاء الاصطناعي داخلها</span></li><li><i class="fa-solid fa-check"></i><span>تعديل الصور والعناصر والطبقات والمقاسات</span></li><li><i class="fa-solid fa-check"></i><span>اللوجو والألوان وتكوين هوية بسيطة ومتناسقة</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تطلع شغل بصري متماسك وتعرف تعدّل عليه بنفسك بدل ما تكتفي بأول نتيجة.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">6</span><div><small>الأسبوع 6</small><h3>الصوت والتعليق الصوتي وفيديو الأفاتار</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>استخدم صوتًا جاهزًا أو صمّم صوتك واستنسخه، وحوّل النص لفيديو يتكلم بدلًا منك.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>عمل Voice Over احترافي بلهجات وأساليب مختلفة</span></li><li><i class="fa-solid fa-check"></i><span>تحسين الصوت وعزل الضوضاء وتغيير النبرة</span></li><li><i class="fa-solid fa-check"></i><span>استنساخ صوتك واستخدامه في المحتوى</span></li><li><i class="fa-solid fa-check"></i><span>عمل Avatar واقعي وتحويل العرض لفيديو كامل</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تعمل تعليقًا صوتيًا أو بودكاست أو فيديو أفاتار من غير استوديو أو معدات غالية.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">7</span><div><small>الأسبوع 7</small><h3>صناعة الفيديو بالذكاء الاصطناعي</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>ابدأ من فكرة أو صورة، وابنِ مشاهد تصلح للتعليم أو التسويق أو عرض شغلك.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>Text to Video وImage to Video</span></li><li><i class="fa-solid fa-check"></i><span>أول وآخر فريم والـStoryboard</span></li><li><i class="fa-solid fa-check"></i><span>تحريك الصور واللوجو وتثبيت شكل الشخصية</span></li><li><i class="fa-solid fa-check"></i><span>الفيديوهات التعليمية والإعلانية ومشاهد الـBefore &amp; After</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تحوّل فكرة مكتوبة أو صورة ثابتة لفيديو له رسالة وبداية ونهاية واضحة.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">8</span><div><small>الأسبوع 8</small><h3>المونتاج وإخراج الفيديو النهائي</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>جمّع المشاهد والصوت والنصوص في فيديو متماسك ينفع يتنشر فعلًا.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>أساسيات CapCut والقص والترتيب والانتقالات</span></li><li><i class="fa-solid fa-check"></i><span>النصوص والترجمة والصوت والموسيقى</span></li><li><i class="fa-solid fa-check"></i><span>تحسين الجودة ورفع الـFrame Rate</span></li><li><i class="fa-solid fa-check"></i><span>تجهيز نسخ مناسبة للريلز واليوتيوب والإعلانات</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تطلع فيديو كامل، مرتب، بجودة مناسبة للمنصة والجمهور اللي هينشر عليه.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">9</span><div><small>الأسبوع 9</small><h3>المواقع والتطبيقات من غير خبرة برمجية</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>اشرح فكرتك، شوف نسخة أولى، واطلب التعديلات لحد ما تبقى قابلة للاستخدام.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>صفحات البيع والمواقع الشخصية ومواقع المشاريع</span></li><li><i class="fa-solid fa-check"></i><span>تطبيقات بسيطة وألعاب ولوحات متابعة</span></li><li><i class="fa-solid fa-check"></i><span>تعديل التصميم والمحتوى والوظائف</span></li><li><i class="fa-solid fa-check"></i><span>اختبار الموقع على الموبايل واللاب وتحسين التجربة</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تعمل موقعًا أو أداة بسيطة لنفسك أو لشغلك، وتعرف تطورها خطوة بخطوة.</p></div>
+</div>
+</div>
+</article>
+<article class="week-item">
+<button aria-expanded="false" class="week-button">
+<div class="week-title-wrap"><span class="week-number">10</span><div><small>الأسبوع 10</small><h3>التطبيق النهائي وخطتك بعد الدبلومة</h3><p>اضغط لعرض هدف الأسبوع ومحاوره والتطبيق اللي هتقدر تعمله بعده.</p></div></div>
+<i class="chev fa-solid fa-chevron-down"></i>
+</button>
+<div class="week-answer">
+<div class="week-body-v2">
+<div class="week-goal"><span class="week-label"><i class="fa-solid fa-bullseye"></i> هدف الأسبوع</span><p>اختار حاجة حقيقية من دراستك أو شغلك أو مشروعك، واستخدم فيها أكتر من مهارة اتعلمتها.</p></div>
+<div class="week-topics"><span class="week-label"><i class="fa-solid fa-list-ul"></i> محاور الأسبوع</span><ul><li><i class="fa-solid fa-check"></i><span>اختيار فكرة مفيدة وقابلة للتنفيذ</span></li><li><i class="fa-solid fa-check"></i><span>تجميع المهارات المناسبة لها</span></li><li><i class="fa-solid fa-check"></i><span>عرض اللي عملته بشكل مفهوم</span></li><li><i class="fa-solid fa-check"></i><span>مراجعة النتيجة وتحديد الخطوة اللي بعدها</span></li></ul></div>
+<div class="week-outcome"><span class="week-label"><i class="fa-solid fa-circle-check"></i> بعد الأسبوع هتقدر</span><p>تشوف فرقًا حقيقيًا في حاجة تهمك: وقت اتوفر، شغل اتحسن، أو فكرة قدرت تنفذها بإيدك.</p></div>
+</div>
+</div>
+</article></div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-brand-navy text-white overflow-hidden" id="experience">
+<div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="grid lg:grid-cols-[.92fr_1.08fr] gap-12 items-center"><div><span class="eyebrow bg-white/10 border border-white/15 text-brand-green mb-5">التجربة مش فيديوهات وبس</span><h2 class="section-title mb-6">كل حاجة محتاجها عشان تتعلّم وتطبّق وترجع للمعلومة بسهولة</h2><p class="text-lg text-slate-200 mb-8">المحاضرات والتاسكات والمرفقات والأدوات والمساعدون موجودين بشكل مرتب، ومعاك مساحة تحتفظ فيها بملاحظاتك والحاجات اللي طبقتها وخطوتك الجاية.</p><div class="grid sm:grid-cols-2 gap-4">
+<div class="glass rounded-2xl p-5"><i class="fa-solid fa-video text-brand-green text-2xl mb-3"></i><h3 class="font-black text-lg mb-2">محاضرات مركزة</h3><p class="text-slate-300 text-sm">شرح واضح ومرفقات ترجع لها وقت ما تحتاج.</p></div>
+<div class="glass rounded-2xl p-5"><i class="fa-solid fa-list-check text-brand-green text-2xl mb-3"></i><h3 class="font-black text-lg mb-2">تاسكات تطبيقية</h3><p class="text-slate-300 text-sm">تطبق على شغلك أو دراستك أو مشروعك.</p></div>
+<div class="glass rounded-2xl p-5"><i class="fa-solid fa-toolbox text-brand-green text-2xl mb-3"></i><h3 class="font-black text-lg mb-2">قوالب وأدوات ومساعدون</h3><p class="text-slate-300 text-sm">تسهّل البداية وتساعدك تطلع نتيجة أفضل.</p></div>
+<div class="glass rounded-2xl p-5"><i class="fa-solid fa-users text-brand-green text-2xl mb-3"></i><h3 class="font-black text-lg mb-2">مجتمع وأسئلة وتحديثات</h3><p class="text-slate-300 text-sm">عشان ما تفضلش لوحدك وما ترجعش للتشتت.</p></div>
+</div></div><div class="app-shell text-brand-navy"><div class="flex items-center justify-between gap-4 border-b border-brand-navy/10 pb-4 mb-5"><div><p class="text-sm text-slate-500 font-bold m-0">مساحتك داخل الدبلومة</p><h3 class="text-xl font-black mt-1">أهلاً بيك يا Smarter Student 👋</h3></div><span class="w-12 h-12 rounded-2xl bg-brand-green/15 text-brand-greenDark flex items-center justify-center"><i class="fa-solid fa-bell"></i></span></div><div class="rounded-2xl bg-brand-navy text-white p-5 mb-4"><p class="text-brand-green font-bold text-sm m-0">الخطوة الحالية</p><h4 class="text-xl font-black mt-1 mb-3">ابنِ مساعدك الشخصي</h4><div class="h-2 bg-white/15 rounded-full overflow-hidden"><div class="w-2/3 h-full bg-brand-green"></div></div></div><div class="app-grid"><div class="app-tile"><i class="fa-solid fa-circle-play text-brand-greenDark text-xl"></i><h4 class="font-black mt-4">محاضراتي</h4><p>الفيديوهات والمرفقات</p></div><div class="app-tile"><i class="fa-solid fa-list-check text-brand-greenDark text-xl"></i><h4 class="font-black mt-4">تاسكاتي</h4><p>التطبيق والمتابعة</p></div><div class="app-tile"><i class="fa-solid fa-robot text-brand-greenDark text-xl"></i><h4 class="font-black mt-4">المساعدون</h4><p>مساعد لكل مهارة</p></div><div class="app-tile"><i class="fa-solid fa-route text-brand-greenDark text-xl"></i><h4 class="font-black mt-4">مساراتي</h4><p>الخطوات والأدوات</p></div><div class="app-tile featured col-span-2 bg-brand-green/15 border border-brand-green/30"><i class="fa-solid fa-user text-brand-greenDark text-xl"></i><h4 class="font-black mt-3">مساحتي</h4><p>ملاحظاتك، أهدافك، مهاراتك، والحاجات اللي طبقتها.</p></div></div></div></div></div>
+</section>
+<section class="py-20 md:py-28 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="text-center max-w-4xl mx-auto mb-12"><span class="eyebrow bg-brand-green/15 text-brand-greenDark mb-5">إيه اللي داخل معاك؟</span><h2 class="section-title mb-5">تجربة كاملة تساعدك تبدأ وتكمل</h2><p class="section-copy mx-auto">القيمة مش في عدد الفيديوهات، لكن في كل حاجة بتسهّل عليك الفهم والتطبيق والرجوع للمعلومة.</p></div><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="included-card"><i class="fa-solid fa-video text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">محاضرات ومرفقات</h3><p>شرح مرتب وفيديوهات ترجع لها في أي وقت.</p></div>
+<div class="included-card"><i class="fa-solid fa-paperclip text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">قوالب جاهزة</h3><p>ملفات وأمثلة تساعدك تبدأ أسرع وتعدّل عليها.</p></div>
+<div class="included-card"><i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">بنك أدوات منظم</h3><p>الأدوات مرتبة حسب الاستخدام بدل ما تدور كل مرة.</p></div>
+<div class="included-card"><i class="fa-solid fa-comments text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">مجتمع ومتابعة</h3><p>مكان للأسئلة والتجارب والتحديثات الجديدة.</p></div>
+<div class="included-card"><i class="fa-solid fa-robot text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">مساعدون جاهزون</h3><p>للدراسة والبحث والمحتوى والعروض وغيرها.</p></div>
+<div class="included-card"><i class="fa-solid fa-gift text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">هدايا حسب الدفعة</h3><p>حسابات أو مزايا إضافية حسب المتاح ونظام الدفعة.</p></div>
+<div class="included-card"><i class="fa-solid fa-rotate text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">تحديثات مستمرة</h3><p>شرح مبسط لأي تغييرات مهمة بدل ما تتابع كل حاجة لوحدك.</p></div>
+<div class="included-card"><i class="fa-solid fa-mobile-screen-button text-2xl text-brand-greenDark mb-4"></i><h3 class="font-black text-xl mb-2">تطبيق الدبلومة</h3><p>كل المحتوى والتقدم والأدوات في مكان واحد.</p></div>
+</div></div>
+</section>
+<section class="py-20 md:py-28 bg-brand-sand" id="instructor">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="grid lg:grid-cols-[.72fr_1.28fr] gap-10 items-center bg-white border-2 border-brand-navy/10 rounded-[2.2rem] p-6 md:p-10 shadow-card">
+<div class="relative max-w-sm mx-auto lg:max-w-none"><div class="absolute -inset-3 rounded-[2rem] bg-brand-green/20 rotate-3"></div><img alt="د. محمود حرب" class="relative w-full aspect-[4/5] object-cover rounded-[1.7rem] shadow-lift" src="https://i.postimg.cc/7PRLbdNN/me.jpg"/></div>
+<div>
+<span class="eyebrow bg-brand-green/15 text-brand-greenDark mb-5">مين هيشرح لك؟</span>
+<h2 class="section-title mb-3">د. محمود حرب</h2>
+<p class="text-xl font-bold text-brand-greenDark mb-6">طبيب أسنان، كاتب محتوى ومحاضر ذكاء اصطناعي</p>
+<div class="bio-copy space-y-5 text-slate-600 text-lg">
+<p>ساعدت أكتر من <strong class="text-brand-navy">200 شخص</strong> يفهموا إزاي يستخدموا الذكاء الاصطناعي في حياتهم وشغلهم ودراستهم بطريقة عملية.</p>
+<p>ومن خلال خبرتي في كتابة المحتوى والذكاء الاصطناعي، شاركت في صناعة فيديوهات وصلت لأكتر من <strong class="text-brand-navy">80 مليون مشاهدة</strong>، واتكلمت عن تطبيقات الذكاء الاصطناعي في عدد من أكبر مؤتمرات طب الأسنان في مصر.</p>
+<div class="bio-quote"><strong>هدفي مش إنك تنبهر بالأدوات وإمكانياتها،</strong> لكن إنك تفهم إمتى تستخدمها، إزاي تراجع نتيجتها، وإزاي تدخلها في يومك بطريقة مفيدة وقابلة للتطبيق.</div>
+<p>عشان كده كل جزء في الدبلومة مبني على أمثلة واستخدامات حقيقية، وبيتشرح ببساطة من غير ما نفقد قوة التطبيق أو نقف عند المعلومات النظرية.</p>
+</div>
+<a class="inline-flex items-center gap-2 mt-7 font-black text-brand-greenDark" href="https://linktr.ee/Mahmoud_harb18" rel="noopener" target="_blank">شوف الأعمال وروابط التواصل <i class="fa-solid fa-arrow-left"></i></a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-brand-cream soft-dot" id="reviews">
+<div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="text-center max-w-4xl mx-auto mb-10"><span class="eyebrow bg-white border border-brand-navy/10 text-brand-greenDark mb-5">آراء الدفعات السابقة</span><h2 class="section-title mb-5">الفرق الحقيقي بيبان لما اللي اتعلمته يساعدك تبقى نسخة أفضل من نفسك!</h2><p class="section-copy mx-auto">ده كلام خريجينا بعد ما استخدموا اللي اتعلموه في شغلهم، دراستهم، وحياتهم… مش مجرد انطباع بعد المحاضرات، لكن نتائج شافوها بنفسهم مع التطبيق.</p></div><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10"><div class="rounded-2xl bg-brand-navy text-white p-5 text-center"><i class="fa-solid fa-language text-brand-green text-2xl mb-3"></i><strong class="block">شرح مبسط وواضح</strong></div><div class="rounded-2xl bg-brand-navy text-white p-5 text-center"><i class="fa-solid fa-hands text-brand-green text-2xl mb-3"></i><strong class="block">تطبيق عملي كتير</strong></div><div class="rounded-2xl bg-brand-navy text-white p-5 text-center"><i class="fa-solid fa-comments text-brand-green text-2xl mb-3"></i><strong class="block">متابعة حقيقية</strong></div><div class="rounded-2xl bg-brand-navy text-white p-5 text-center"><i class="fa-solid fa-bolt text-brand-green text-2xl mb-3"></i><strong class="block">وقت ومجهود أقل</strong></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5" id="reviewsGrid"><article class="review-card md:col-span-2">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>واحد من أجمل القرارات اللي أخدتها</h3>
+<div class="review-copy"><p>“واحد من أجمل القرارات اللي أخدتها في حياتي مؤخرًا، فتح لي أشياء كتيرة جدًا، واستمتعت جدًّا جدًّا، رجعني إني لسه بعرف أعمل حاجات مميزة شاطرة فيها، وقت التاسكات كان أكتر وقت ممتع في الأسبوع.”</p><p>“مبسوطة جدًّا بالتاسكات اللي اشتغلت عليها، في شغلي، في مجالات اهتمامي، حاجات عملتها لإخواتي شخصيًا وفي شغلهم، فكرة طلعت بيها قدمتها للدكتور بتاعي وعجبته وحاليا شغالين عليها، دعواتكم الشديدة..”</p><p>“شكرًا جدًّا جدًّا والله، مبسوطة جدًا، وهيوحشني الوقت ده، استمتعت، وممتنة.. ربنا يتقبل منكم.. وحاسة إني عايزة أبدأ مع الدفعة الجديدة تاني 🤣”</p></div>
+</article>
+<article class="review-card">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>شرح استثنائي ومبسط</h3>
+<div class="review-copy"><p>“الكورس مفيد جدا جدا حقيقي واستفدت منه، والشرح استثنائي ومبسط بشكل كبير لأي حد لسه مش متعمق في المجال.”</p></div>
+</article>
+<article class="review-card">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>كل مرة مستنية أعمل حاجة جديدة</h3>
+<div class="review-copy"><p>“مبهر وممتع أوي.. حقيقي ببقى مستنية الشرح الجديد عشان أشوف هاا هعمل عظمة إيه المرادي؟ سهل عليا كتير أوي وقت ومجهود مش طبيعي، وجميل إن فيه دايمًا أفكار مختلفة في كل حاجة ومش محصورة في مجال معين بالعكس.”</p></div>
+</article>
+<article class="review-card md:col-span-2">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>أيسر وأسهل طريق للي تايه</h3>
+<div class="review-copy"><p>“نفسي كل الناس تدخل الدبلومة حقيقي. لو حد تايه في تطورات الـAI ومش عارف يجيبها منين ولا منين فبجد الدبلومة أيسر وأسهل وأسرع طريق.”</p><p>“مفيدة على كل المستويات تقريبًا: إزاي تتعامل مع نماذج الـAI، وإزاي تستخدمه في تعليمك وشغلك باحترافية. الدبلومة ساعدتني جدًا جدًا في البحث العلمي والماركتنج لشغلي، لأنك هتتعلم تعمل صور وفيديوهات وأصوات بالذكاء الاصطناعي.”</p><p>“فكرة إنك تلاقي مساعد شخصي لكل حاجة حابب تعملها دي رهيبة، كأنك معاك دماغ تانية احترافية عالمية 😆 فبجد أنصح كل الناس يدخلوا الدبلومة.”</p><p>“بالإضافة للمحتوى القيم جدًا، هتلاقوا متابعة باستمرار، والدنيا واضحة جدًا، وتشجيع ومفاجآت. أنا أخدت Canva Pro مجانًا على حسابي الشخصي. فبجد ذوق وأدب وأخلاق القائمين عليها في حتة تانية ♥️”</p></div>
+</article>
+<article class="review-card">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>جميل وممتع</h3>
+<div class="review-copy"><p>“ما شاء الله كورس جميل وممتع معاك يا دكتور محمود، ربنا يكرمكم وينفع بيك يا رب 🧡”</p></div>
+</article>
+<article class="review-card">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>مفيد ومتوفر فيه كل شيء</h3>
+<div class="review-copy"><p>“كورس جميل ومفيد جدًا، وأسلوب حضرتك مبسط وسلس، ومتوفر فيه كل شيء بصراحة.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>المتابعة اليومية كانت حقيقية</h3>
+<div class="review-copy"><p>“أكتر حاجة حبيتها هي المتابعة اللي بتكون من د. محمود أو من التيم، حرفيًا متابعة يومية، ودي كلمة حقيقية مش مجرد حاجة بتتقال للإعلان وخلاص. وكمان كل اللي قرأته قبل ما أدخل الدبلومة لقيته موجود الحمد لله، ربنا يباركلكوا.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>مفيدة للمبتدئ والمتخصص</h3>
+<div class="review-copy"><p>“الدبلومة مفيدة جدًا للمتخصص وللمبتدئ. قدرت أعرف أهم أدوات الذكاء الاصطناعي وطبقت، وأي سؤال كان بيواجهني كنت بلاقي الإجابة بتتشرح بسعة صدر وطولة بال. حقيقي من أكتر الكورسات اللي استفدت منها بعد التخرج، وأتمنى تكون شيء أساسي للمعلمين والطلاب ومختلف المجالات. والحمد لله ربنا يسر لي إني أشرح واحدة من الأدوات اللي أخدتها بالدبلومة لطلابي وكانوا مبسوطين جدًا.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>تجربة عملية مش كلام نظري</h3>
+<div class="review-copy"><p>“شكرًا جدًا على الدورة، كانت مفيدة جدًا بالنسبة لي. وكتر خيركم على الإحسان في كل التفاصيل، وعلى الحسابات اللي أخدناها علشان نجرب عملي وما يبقاش نظري بس، وعلى أكونت Canva، وعلى الاهتمام بالإجابة على كل الأسئلة. شكرًا جدًا.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>غيّرت طريقة تفكيري</h3>
+<div class="review-copy"><p>“الدبلومة كانت اللهم بارك جميلة جدًا جدًا، استفدت منها كتير وفادتني كتير، حتى غيرت من طريقة تفكيري عن الـAI وإنه ممكن أعمل منه حاجات كتير مفيدة أكتر من ضرره.”</p><p>“الشرح جميل وبسيط ومباشر وواضح، وأحلى حاجة إن دكتور محمود كان متعاون وعنده إحسان بأكبر شكل ممكن شوفته بصراحة. ربنا ينفع بيه ويبارك له دايمًا. بجد أنصح بيها وبشدة.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>كل محاضرة كنت بطلع بحاجة مفيدة</h3>
+<div class="review-copy"><p>“استمتعت جدًا بالدبلومة، وحسيت إنها فعلًا أضافت لي. اتعلمت منها أدوات ومهارات جديدة، وكل محاضرة كنت بطلع منها بحاجة مفيدة، فشكرًا جدًا.”</p></div>
+</article>
+<article class="review-card review-extra hidden md:col-span-2">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>شاملة ومبسطة في نفس الوقت</h3>
+<div class="review-copy"><p>“من زمان وأنا منبهرة بعالم الذكاء الاصطناعي، لكن فكرة إني أتعلمه كانت مخيفة شوية بالنسبة لي وموترة جدًا، خصوصًا لما بدأت أدور وأحاول أتعلم، وكمية الكورسات اللي قابلتني، وكمية بوستات إزاي تتعلم الـAI في ساعتين وتكسب مليون دولار في شهر دي قفلتني شوية.”</p><p>“ويمكن عشان كده ربنا بعت لي الدبلومة دي، من بوست لواحدة خريجة جميلة ماكنتش أعرفها قبل كده لكن ظهر لي بالصدفة. دخلت أسأل وعرفت المحتوى واتحمست أدخل. الدبلومة شاملة ومبسطة في نفس الوقت، بتعلمك ألف باء ذكاء اصطناعي وفي نفس الوقت تخليك تاخد منه نتيجة زي المحترفين.”</p><p>“دكتور محمود من الناس الخلوقة جدًا جدًا، ومجتهد أوي ومتابع دايمًا للجديد، ويجاوب على كل الاستفسارات. أنا يمكن ماكنتش طالبة شاطرة أوي وكنت بسمع المحاضرة وبطبق متأخر دايمًا، لكن حقيقي المحتوى أكتر من رائع وبرشحه لكل اللي أعرفهم.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>خطوة مهمة بدل الشغل اللي بياخد ساعات</h3>
+<div class="review-copy"><p>“أنصح جدًا أي حد إنه يبدأ بالخطوة دي وياخد الكورس المكثف ده، لأنه فعلًا ملم بمعلومات كتيرة تفيدك في مجالك، بدل ما تكون وسط ناس شغالة بالـAI وإنت لسه في عصر الورقة والقلم والعمل اللي بياخد ساعات ومش بيكون بنفس الخدمة بتاعت الـAI.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>استفدت في تعلمي وشغلي</h3>
+<div class="review-copy"><p>“استفدت جدًا من الدبلومة في الحاجات اللي بتعلمها وفي شغلي. ما شاء الله الشرح كافي ووافي ومجمع الحاجات المهمة وطرق كتيرة لكل حاجة اتعلمناها.”</p><p>“وحتى صحابي لما بقولهم على حاجة بسيطة تسهل شغلهم أو مذاكرتهم بينبهروا وبيشكروني جامد 🤣 ده غير أكونت Canva Pro اللي خدته هدية، بجد انبسطت أوي أوي بيه.”</p><p>“برشح الدبلومة لأي حد. الـAI فعلًا ما بقاش رفاهية، بقى أساس، والدبلومة بداية لطيفة ومكثفة لأي حد مهتم.”</p></div>
+</article>
+<article class="review-card review-extra hidden">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>فرق حقيقي في الإنتاجية وطريقة الشغل</h3>
+<div class="review-copy"><p>“دبلومة Smarter With AI.. اللي عجبني إنها مش مجرد معلومات نظرية، لكن تطبيق عملي على أدوات الذكاء الاصطناعي اللي بنستخدمها فعلًا في الشغل، مع شرح بسيط ومنظم حتى لو لسه بتبدأ.”</p><p>“لو حد بيفكر يدخل مجال الـAI أو يطور شغله ويواكب التطور، فأرشح دبلومة Smarter With AI بكل ثقة. تستحق الوقت والمجهود، وهتحس بفرق حقيقي في إنتاجيتك وطريقة شغلك.”</p></div>
+</article>
+<article class="review-card review-extra hidden md:col-span-2">
+<div class="review-head"><span class="quote-icon"><i class="fa-solid fa-quote-right"></i></span><div aria-label="5 نجوم" class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div></div>
+<h3>القيمة أكبر بكتير من المدفوع</h3>
+<div class="review-copy"><p>“أخيرًا أنا مش هسيّف كل البوستات بتاعت الـAI عشان أبقى أذاكرها وأفهمها، عشان د. محمود مش بس رفع عنا جهلنا بالـAI، هو علمنا كل الـAI اللي في الدنيا تقريبًا بكل أبديت جديد ظهر لحد آخر دقيقة في الدبلومة!”</p><p>“تجربة مبهرة وسعت عيني، وساحرة من كتر ما سهلت حياتي ومذاكرتي! أهم ميزة في الدبلومة هي طريقة المحاضر وشخصيته، الشغف اللي عنده حرّك فضولي إني أكمل وأتعلم رغم ضيق الوقت.”</p><p>“الكرم والسعة اللا متناهيين، ريكوردات الشرح، لايفات للمتابعة، صبره وكرمه البالغين كانوا من الحاجات اللي أدهشتني فعلًا، ويستحيل يحسسك إن أسئلتك بديهية، فضلًا عن دعمه الكبير لينا عشان نتحرك وتشجيعه الصادق.”</p><p>“حاولوا تخليكوا Smarter With AI بسرعة :) عشان بجد هي لازم تغلى، لأن المدفوع أقل من اللي تستحقه محاضرتين تلاتة بس من الدبلومة.”</p></div><a class="review-link" href="https://www.facebook.com/share/p/17hFhafCYx/" rel="noopener" target="_blank"><i class="fa-brands fa-facebook"></i> عرض البوست الأصلي</a>
+</article></div><div class="text-center mt-8"><button class="inline-flex items-center gap-2 bg-brand-navy text-white px-7 py-4 rounded-xl font-black" id="reviewsToggle">اقرأ كل الآراء <i class="fa-solid fa-chevron-down"></i></button></div></div>
+</section>
+<section class="py-20 md:py-28 bg-brand-navy text-white" id="enroll">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="text-center max-w-4xl mx-auto mb-12">
+<span class="eyebrow bg-white/10 border border-white/15 text-brand-green mb-5">تفاصيل الاشتراك</span>
+<h2 class="section-title mb-5">احجز مكانك واختر النسخة المناسبة ليك</h2>
+<p class="text-slate-300 text-lg">محتوى الدبلومة الأساسي واحد في النسختين. الفرق في طريقة الدراسة، حجم المتابعة، دخول مجتمع الخريجين، والهدايا والاشتراكات الإضافية.</p>
+</div>
+<div class="investment-note">
+<i class="fa-solid fa-arrow-trend-up"></i>
+<div><strong>مش مجرد مبلغ بتدفعه مقابل فيديوهات… ده استثمار في مهارات هتستخدمها كل يوم.</strong><p>هتتعلم طرق عملية تساعدك في البحث، التعلم، المحتوى، العروض، الصور، الفيديو والمشاريع؛ وتفضل ترجع للشرح والكتيبات والتطبيق وقت ما تحتاج.</p></div>
+</div>
+<div class="grid lg:grid-cols-2 gap-7 items-stretch">
+<article class="plan-card bg-white text-brand-navy" id="recorded-plan">
+<span class="eyebrow bg-brand-sand text-brand-greenDark mb-5">متاحة فورًا</span>
+<h3 class="text-3xl font-black mb-3">النسخة المسجلة</h3>
+<p class="text-slate-600 mb-5">اختيار مناسب لو عايز تبدأ حالًا، وتتعلم في مواعيدك، وتعيد أي شرح بالسرعة اللي تناسبك.</p>
+<div class="price-box">
+<div><div class="price-label">قيمة استثمارك بعد خصم 40%</div><div class="price-current">2399 <small>جنيه</small></div><span class="saving-pill"><i class="fa-solid fa-wallet"></i> وفّرت 1601 جنيه</span></div>
+<div class="text-left"><div class="price-label">القيمة الأصلية</div><div class="price-old">4000 جنيه</div></div>
+</div>
+<div class="plan-details"><h4>اشتراكك يشمل:</h4><ul>
+<li><i class="fa-solid fa-check"></i><span>وصول فوري لكل محاضرات الدبلومة المسجلة، تقدر تشوفها وتعيدها وقت ما تحتاج.</span></li>
+<li><i class="fa-solid fa-check"></i><span>شروحات مفصلة وتطبيقات عملية، مش مجرد استعراض سريع للأدوات.</span></li>
+<li><i class="fa-solid fa-check"></i><span>كتيبات، ملخصات، قوالب ومرفقات منظمة للحاجات اللي بتتشرح.</span></li>
+<li><i class="fa-solid fa-check"></i><span>تطبيق الدبلومة: المحاضرات، التاسكات، بنك الأدوات، المساعدون والمسارات في مكان واحد.</span></li>
+<li><i class="fa-solid fa-check"></i><span>تحديثات وإضافات المحتوى اللي بتتوفر للنسخة المسجلة داخل مساحتك.</span></li>
+<li><i class="fa-solid fa-circle-info"></i><span><strong>مجتمع الخريجين غير شامل.</strong> تقدر تنضم له بعد الدبلومة بتكلفة إضافية.</span></li>
+</ul></div>
+<a class="plan-link" href="https://wa.me/201007964766?text=السلام%20عليكم،%20عايز%20أحجز%20النسخة%20المسجلة%20من%20دبلومة%20Smarter%20With%20AI%20بسعر%202399%20جنيه" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp text-xl"></i> احجز النسخة المسجلة</a>
+</article>
+<article class="plan-card live-plan bg-brand-green text-brand-navy" id="live-plan">
+<span class="plan-badge">أفضل تجربة ومتابعة</span>
+<span class="eyebrow bg-brand-navy/10 mb-5">أماكن محدودة حسب الدفعة</span>
+<h3 class="text-3xl font-black mb-3">الدفعة اللايف</h3>
+<p class="text-brand-navy/80 mb-5">مناسبة لو عايز جدول واضح، شرح مباشر، حد يتابع تطبيقك، وتسأل وتناقش طول فترة الدفعة.</p>
+<div class="price-box">
+<div><div class="price-label">قيمة استثمارك بعد خصم 40%</div><div class="price-current">3599 <small>جنيه</small></div><span class="saving-pill"><i class="fa-solid fa-wallet"></i> وفّرت 2401 جنيه</span></div>
+<div class="text-left"><div class="price-label">القيمة الأصلية</div><div class="price-old">6000 جنيه</div></div>
+</div>
+<div class="plan-details live-details"><h4>اشتراكك يشمل:</h4><ul>
+<li><i class="fa-solid fa-check"></i><span>كل محتوى ومميزات النسخة المسجلة بالكامل.</span></li>
+<li><i class="fa-solid fa-check"></i><span>لقاءات مباشرة حسب جدول الدفعة، وكل لقاء بيتسجل عشان ترجع له.</span></li>
+<li><i class="fa-solid fa-check"></i><span>متابعة مستمرة للتاسكات، إجابة عن الأسئلة، وملاحظات تساعدك تطور تطبيقك.</span></li>
+<li><i class="fa-solid fa-check"></i><span>شروحات إضافية، تريكات وتجارب عملية بتوفر عليك وقت وتجربة طويلة.</span></li>
+<li><i class="fa-solid fa-check"></i><span><strong>دخول مجتمع الخريجين مجانًا</strong> بعد انتهاء الدفعة، من غير تكلفة إضافية.</span></li>
+</ul></div>
+<div class="gift-highlight">
+<h4><i class="fa-solid fa-gift"></i> هدايا وبونص كتير بتاخدهم مجانًا خلال رحلة اللايف</h4>
+<p>إلى جانب المحتوى واللقاءات والمتابعة، بنوفر لك حاجات تساعدك تطبّق بإيدك من أول يوم وتختصر عليك وقت وتجارب كتير.</p>
+<div class="gift-grid">
+<div class="gift-item"><i class="fa-solid fa-crown"></i><span>اشتراكات وحسابات مدفوعة لتجربة الأدوات عمليًا، حسب المتاح في كل دفعة.</span></div>
+<div class="gift-item"><i class="fa-solid fa-book-open"></i><span>كتيبات وملخصات وشروحات تفصيلية ترجع لها وقت ما تحتاج.</span></div>
+<div class="gift-item"><i class="fa-solid fa-wand-magic-sparkles"></i><span>قوالب، مساعدين وتريكات جاهزة تساعدك تنجز أسرع.</span></div>
+<div class="gift-item"><i class="fa-solid fa-box-open"></i><span>مفاجآت وهدايا إضافية بتتحدد حسب كل دفعة.</span></div>
+</div>
+<p class="gift-final-line"><i class="fa-solid fa-heart"></i> كل ده وأكتر بونص مجاني مننا ليك مع تجربة اللايف، من غير أي رسوم إضافية.</p>
+</div>
+<a class="plan-link dark-link" href="https://wa.me/201007964766?text=السلام%20عليكم،%20عايز%20أحجز%20مكاني%20في%20الدفعة%20اللايف%20من%20دبلومة%20Smarter%20With%20AI%20بسعر%203599%20جنيه" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp text-xl"></i> احجز مكانك في الدفعة اللايف</a>
+</article>
+</div>
+<div class="payment-box" id="payment">
+<h3><i class="fa-solid fa-credit-card text-brand-greenDark ml-2"></i> طريقة الدفع وتأكيد الحجز</h3>
+<p class="text-slate-600 font-semibold">بعد ما تختار النسخة المناسبة لاستثمارك، حوّل قيمة الاشتراك، وبعدها ابعت صورة التحويل واسمك كامل على واتساب عشان نأكد حجزك.</p>
+<div class="payment-methods">
+<div class="payment-method"><strong><i class="fa-solid fa-bolt text-brand-greenDark ml-2"></i> InstaPay — الأفضل لو متاح</strong><span class="payment-number">01007964766</span></div>
+<div class="payment-method"><strong><i class="fa-solid fa-mobile-screen-button text-brand-greenDark ml-2"></i> Vodafone Cash</strong><span class="payment-number">01007964766</span></div>
+</div>
+<p class="payment-note"><i class="fa-solid fa-circle-info ml-2"></i> قبل التحويل، يفضّل تبعت رسالة سريعة للتأكد من توافر مكان في الدفعة اللايف. النسخة المسجلة متاحة فورًا.</p>
+<div class="payment-actions">
+<a href="https://wa.me/201007964766?text=السلام%20عليكم،%20حوّلت%20قيمة%20الاشتراك%20وعايز%20أأكد%20حجزي%20في%20دبلومة%20Smarter%20With%20AI" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> بعت التحويل — أكّد حجزك</a>
+<a class="secondary-payment-link" href="https://wa.me/201007964766?text=السلام%20عليكم،%20عندي%20سؤال%20قبل%20الدفع%20بخصوص%20دبلومة%20Smarter%20With%20AI" target="_blank" rel="noopener"><i class="fa-regular fa-circle-question"></i> عندي سؤال قبل الدفع</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28 bg-brand-cream" id="faq">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<div class="section-frame">
+<div class="text-center mb-12"><span class="eyebrow bg-white border border-brand-navy/10 text-brand-greenDark mb-5">الأسئلة الشائعة</span><h2 class="section-title mb-4">الحاجات اللي غالبًا في بالك</h2><p class="section-copy mx-auto">كل سؤال وإجابته داخل كارت واضح. اضغط على السؤال عشان تظهر التفاصيل.</p></div>
+<div class="space-y-5">
+<div class="faq-item"><button aria-expanded="true" class="faq-button active"><span>أنا مبتدئ تمامًا أو عندي خبرة، هل الدبلومة مناسبة؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer" style="max-height:400px"><div class="faq-answer-inner"><p>أيوه. الدبلومة بتبدأ من الصفر، لكنها مش للمبتدئين فقط. لو أول مرة تبدأ هتلاقي الأساسيات مرتبة، ولو عندك خبرة هتستفيد من التطبيقات الأوسع في البحث والمحتوى والصور والفيديو والمساعدين والمواقع.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>إيه الفرق بين النسخة المسجلة والدفعة اللايف؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p><strong>النسخة المسجلة — 2399 بدل 4000:</strong> تبدأ فورًا، تدرس في مواعيدك، ومعاك المحاضرات والتطبيق والكتيبات والمرفقات والأدوات والمساعدون. دخول مجتمع الخريجين بيكون بتكلفة إضافية.</p><p><strong>الدفعة اللايف — 3599 بدل 6000:</strong> فيها كل محتوى المسجلة، ومعاه لقاءات مباشرة، متابعة مستمرة للتاسكات والأسئلة، شروحات وتريكات إضافية، هدايا واشتراكات مدفوعة حسب المتاح، ودخول مجتمع الخريجين مجانًا.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>هل لازم يكون عندي لابتوب؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>جزء كبير ممكن يتطبق من الموبايل. اللابتوب بيخلي التجربة أسهل في العروض والفيديو والمواقع والحاجات اللي فيها تفاصيل أكتر، لكنه مش شرط عشان تبدأ.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>هل محتاج أكون شاطر في الإنجليزي أو البرمجة؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>مش محتاج خبرة برمجية، والشرح بالعربي. أي مصطلح مهم بنوضحه ببساطة، ومعرفة إنجليزي بسيطة مفيدة لبعض الواجهات لكنها مش شرط للبدء.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>هل الأدوات كلها مجانية؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>هنستخدم أدوات فيها خطط مجانية وأدوات فيها مميزات مدفوعة، وهنوضح البدائل عشان تختار حسب احتياجك وميزانيتك. أي هدايا أو حسابات مدفوعة بتكون حسب المتاح في الدفعة.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>هل المحتوى بيتحدث مع تغيّر الأدوات؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>المحتوى بيتراجع ويتحدث، وأي تغيير مهم أو إضافة جديدة بتتشرح وتتنظم داخل مساحة الدبلومة أو المجتمع حسب تفاصيل النسخة.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>محتاج وقت قد إيه للمشاهدة والتطبيق؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>الوقت بيختلف حسب كل أسبوع وحسب التطبيق اللي هتختاره. المهم تخصص وقتًا للمشاهدة ووقتًا للتجربة، لأن أكبر استفادة بتيجي لما تطبق على حاجة تخصك فعلًا.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>هل علاقتي بالدبلومة بتنتهي بعد المحاضرات؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>لا. في النسخة اللايف دخول مجتمع الخريجين مجاني، وده بيساعدك تفضل متابع التحديثات والأسئلة والتجارب بعد انتهاء الدفعة. في النسخة المسجلة، الانضمام للمجتمع متاح بتكلفة إضافية.</p></div></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>إزاي أدفع وأأكد حجزي؟</span><i class="chev fa-solid fa-chevron-down"></i></button><div class="faq-answer"><div class="faq-answer-inner"><p>الدفع عن طريق <strong>InstaPay وده الأفضل لو متاح</strong>، أو Vodafone Cash على رقم <strong dir="ltr">01007964766</strong>. بعد التحويل ابعت صورة العملية واسمك كامل والنسخة اللي اخترتها على واتساب لتأكيد الحجز.</p></div></div></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-brand-green">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-brand-navy">
+<span class="eyebrow bg-white text-brand-greenDark border border-brand-navy/10 mb-5">مهما كان مستواك الحالي</span>
+<h2 class="section-title mb-6">معانا هتطوّر استخدامك للذكاء الاصطناعي في الحاجات اللي بتهمك فعلًا</h2>
+<p class="text-lg font-semibold opacity-85 mb-8 max-w-3xl mx-auto">اختار النسخة المناسبة، راجع طريقة الدفع، واحجز مكانك. ولو محتار بين المسجلة واللايف، ابعت لنا طبيعة وقتك وهدفك ونساعدك تختار.</p>
+<a class="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 rounded-xl font-black text-lg shadow-xl" href="https://wa.me/201007964766?text=السلام%20عليكم،%20راجعت%20محتوى%20دبلومة%20Smarter%20With%20AI%20ومحتاج%20أحجز%20أو%20أعرف%20أنهي%20نسخة%20أنسب%20ليا" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp text-2xl"></i> احجز مكانك أو اسأل عن التفاصيل</a>
+</div>
+</section>
+</main>
+<footer class="bg-brand-navy text-slate-300 py-10"><div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-6 items-center justify-between text-center md:text-right"><div class="flex items-center gap-3"><img alt="Smarter With AI" class="h-11 bg-white rounded-lg p-1" src="https://i.postimg.cc/kg2KBzzN/Untitled-design.png"/><div><strong class="block text-white">Smarter With AI</strong><span class="text-sm">من الصفر للاحتراف في استخدام الذكاء الاصطناعي</span></div></div><div class="flex items-center gap-4 text-xl"><a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61577068962672" rel="noopener" target="_blank"><i class="fa-brands fa-facebook"></i></a><a aria-label="Facebook Group" href="https://www.facebook.com/groups/1106148034264004" rel="noopener" target="_blank"><i class="fa-solid fa-users"></i></a><a aria-label="YouTube" href="https://youtube.com/@smarterwithai18?si=aMFzVqyd1bK0QRSV" rel="noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a><a aria-label="WhatsApp" href="https://wa.me/201007964766" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></div><p class="text-sm">جميع الحقوق محفوظة © Smarter With AI</p></div></footer>
+<div class="mobile-cta fixed md:hidden bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-brand-navy/10 p-3"><a class="flex items-center justify-center gap-2 w-full bg-brand-green text-brand-navy rounded-xl py-3.5 font-black" href="#enroll"><i class="fa-solid fa-circle-info text-xl"></i> احجز مكانك في الدبلومة</a></div>
+<script>
+    document.querySelectorAll('.week-button').forEach(btn=>btn.addEventListener('click',()=>{const answer=btn.nextElementSibling;const open=btn.classList.toggle('active');btn.setAttribute('aria-expanded',open);answer.style.maxHeight=open?answer.scrollHeight+'px':'0px';}));
+    document.querySelectorAll('.faq-button').forEach(btn=>btn.addEventListener('click',()=>{const answer=btn.nextElementSibling;const open=btn.classList.toggle('active');btn.setAttribute('aria-expanded',open);answer.style.maxHeight=open?answer.scrollHeight+'px':'0px';}));
+    const toggle=document.getElementById('reviewsToggle');
+    toggle.addEventListener('click',()=>{const extras=[...document.querySelectorAll('.review-extra')];const showing=extras.some(x=>x.classList.contains('hidden'));extras.forEach(x=>x.classList.toggle('hidden',!showing));toggle.innerHTML=showing?'إخفاء الآراء الإضافية <i class="fa-solid fa-chevron-up"></i>':'اقرأ كل الآراء <i class="fa-solid fa-chevron-down"></i>';});
+  </script>
 </body>
 </html>
